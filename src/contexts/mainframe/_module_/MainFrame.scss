@@ -1,0 +1,21 @@
+
+.data-vis-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  .data-vis-header {
+    height: 50px;
+  }
+
+  .data-vis-body {
+    flex: 1;
+    padding: 100px;
+
+    svg {
+      height: 100%;
+      width: 100%;
+    }
+
+  }
+}

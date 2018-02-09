@@ -1,0 +1,35 @@
+
+@mixin transition($args...) {
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -ms-transition: $args;
+  -o-transition: $args;
+  transition: $args;
+}
+
+@mixin animation($args...) {
+  -webkit-animation: $args;
+  -moz-animation: $args;
+  -ms-animation: $args;
+  -o-animation: $args;
+  animation: $args;
+}
+
+@mixin keyframes($animation, $from, $to) {
+  @keyframes #{$animation} {
+    from { opacity: $from }
+    to { opacity: $to }
+  }
+  @-moz-keyframes #{$animation} {
+    from { opacity: $from }
+    to { opacity: $to }
+  }
+  @-webkit-keyframes #{$animation} {
+    from { opacity: $from }
+    to { opacity: $to }
+  }
+  @-o-keyframes #{$animation} {
+    from { opacity: $from }
+    to { opacity: $to }
+  }
+}
