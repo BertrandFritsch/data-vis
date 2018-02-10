@@ -7817,7 +7817,9 @@ exports[`MainFrameContainer should render correctly 1`] = `
         ]
       }
       dispatch={[Function]}
+      maxDate={2016-12-31T23:00:00.000Z}
       maxValue={3.03}
+      minDate={1879-12-31T23:00:00.000Z}
       minValue={-3.31}
     >
       <div>

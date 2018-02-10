@@ -1,7 +1,6 @@
 import { connect } from 'react-redux';
 import MainFrame from './MainFrame';
 import { MainFrameState, RawRecord, TemperaturesByPlace, WorldPlace } from './reducers';
-import { Dispatch } from './actionTypes';
 import { createSelector } from 'reselect';
 
 export const transformData = (data: RawRecord[]) => ({
@@ -23,7 +22,9 @@ export const transformData = (data: RawRecord[]) => ({
         maxValue: Math.max(minMax.maxValue, ...values)
       });
     },
-    { minValue: +Infinity, maxValue: -Infinity })
+    { minValue: +Infinity, maxValue: -Infinity }),
+  minDate: data.length > 0 ? new Date(data[ 0 ].Year, 0, 1) : new Date(),
+  maxDate: data.length > 0 ? new Date(data[ data.length - 1 ].Year, 0, 1) : new Date()
 });
 
 const getMaxMinValues = createSelector(

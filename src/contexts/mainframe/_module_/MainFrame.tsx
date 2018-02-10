@@ -8,6 +8,8 @@ export interface Props {
   data: TemperaturesByPlace[];
   minValue: number;
   maxValue: number;
+  minDate: Date;
+  maxDate: Date;
 }
 
 interface State {
@@ -57,7 +59,7 @@ export default class MainFrame extends React.PureComponent<Props, State> {
       <div className='data-vis-container'>
         <div className='data-vis-header'>
           <p className='data-vis-header-1'>Zonal Annual Mean Land-Ocean Temperature</p>
-          <p className='data-vis-header-2'>Base period: 1951-1980</p>
+          <p className='data-vis-header-2'>{ `${ this.props.minDate.getFullYear() } - ${ this.props.maxDate.getFullYear() }` }</p>
         </div>
         <div className='data-vis-body'>
           <div className='data-vis-chart' tabIndex={ -1 } ref={ this.renderChart } />

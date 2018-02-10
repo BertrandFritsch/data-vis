@@ -16,7 +16,7 @@ exports[`<MainFrame /> should adapt when the window is resized 1`] = `
       <p
         class="data-vis-header-2"
       >
-        Base period: 1951-1980
+        1880 - 2017
       </p>
     </div>
     <div
@@ -862,7 +862,7 @@ exports[`<MainFrame /> should add a line when toggling a zone selector 1`] = `
       <p
         class="data-vis-header-2"
       >
-        Base period: 1951-1980
+        1880 - 2017
       </p>
     </div>
     <div
@@ -1717,7 +1717,7 @@ exports[`<MainFrame /> should add a line when toggling a zone selector 2`] = `
       <p
         class="data-vis-header-2"
       >
-        Base period: 1951-1980
+        1880 - 2017
       </p>
     </div>
     <div
@@ -2562,7 +2562,7 @@ exports[`<MainFrame /> should render correctly 1`] = `
     <p
       className="data-vis-header-2"
     >
-      Base period: 1951-1980
+      1880 - 2017
     </p>
   </div>
   <div
@@ -3032,7 +3032,7 @@ exports[`<MainFrame /> should render the svg element 1`] = `
       <p
         class="data-vis-header-2"
       >
-        Base period: 1951-1980
+        1880 - 2017
       </p>
     </div>
     <div
@@ -3878,7 +3878,7 @@ exports[`<MainFrame /> should update when data change 1`] = `
       <p
         class="data-vis-header-2"
       >
-        Base period: 1951-1980
+        1880 - 2017
       </p>
     </div>
     <div
