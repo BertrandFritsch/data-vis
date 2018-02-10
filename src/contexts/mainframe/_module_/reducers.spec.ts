@@ -10,6 +10,6 @@ describe('mainFrame reducer', () => {
   });
 
   it('should initialize the state with the initial state', () => {
-    expect(reducer(undefined, { type: 'FAKE_ACTION' } as any)).toMatchSnapshot();
+    expect(reducer(undefined, { type: ActionTypes.MAINFRAME_DEFAULT_ACTION } as any)).toMatchSnapshot();
   });
 });

@@ -1,26 +1,40 @@
-import ActionTypes, { MainFrameAction } from './actionTypes';
-import { data } from '../../../../data/data';
+import { MainFrameAction } from './actionTypes';
 
-export interface Record {
-  'Year': number;
-  'Glob': number;
-  'NHem': number;
-  'SHem': number;
-  '24N-90N': number;
-  '24S-24N': number;
-  '90S-24S': number;
-  '64N-90N': number;
-  '44N-64N': number;
-  '24N-44N': number;
-  'EQU-24N': number;
-  '24S-EQU': number;
-  '44S-24S': number;
-  '64S-44S': number;
-  '90S-64S': number;
+// tslint:disable-next-line no-var-requires
+const data: RawRecord[] = require('../../../../data/data.json');
+
+export type WorldPlace =
+    'Glob'
+  | 'NHem'
+  | 'SHem'
+  | '24N-90N'
+  | '24S-24N'
+  | '90S-24S'
+  | '64N-90N'
+  | '44N-64N'
+  | '24N-44N'
+  | 'EQU-24N'
+  | '24S-EQU'
+  | '44S-24S'
+  | '64S-44S'
+  | '90S-64S';
+
+export type RawRecord = {
+    [ key in WorldPlace ]: number | null;
+  } & { Year: number };
+
+export interface TemperatureByDate {
+  date: Date;
+  temperature: number;
+}
+
+export interface TemperaturesByPlace {
+  place: WorldPlace;
+  values: TemperatureByDate[];
 }
 
 export interface State {
-  data: Record[];
+  data: RawRecord[];
 }
 
 const initialState: State = {

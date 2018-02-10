@@ -3,19 +3,96 @@
   display: flex;
   flex-direction: column;
   height: 100%;
+  width: 1000px;
+  margin: 0 auto;
 
   .data-vis-header {
-    height: 50px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    p {
+      text-align: center;
+    }
+
+    .data-vis-header-1 {
+      font-size: 2rem;
+    }
+
+    .data-vis-header-2 {
+      font-size: 1.5rem;
+    }
   }
 
   .data-vis-body {
     flex: 1;
-    padding: 100px;
+    display: flex;
+    min-height: 500px;
 
-    svg {
-      height: 100%;
-      width: 100%;
+    .data-vis-chart {
+      flex: 1;
+      align-self: stretch;
+      margin: 100px 0 100px 100px;
+      min-width: 100px;
+
+      svg {
+
+        .data-vis-line {
+          fill: none;
+          stroke-linejoin: round;
+          stroke-linecap: round;
+          stroke-width: 1.5;
+        }
+
+        .data-vis-axis-y {
+          .domain {
+            display: none;
+          }
+          .tick line {
+            stroke: #767676;
+          }
+
+          .tick:not(.data-vis-axis-y-zero):not(:first-of-type) line {
+            stroke-dasharray: 2, 2;
+          }
+
+          .data-vis-axis-y-zero line {
+            stroke-width: 2;
+          }
+        }
+
+        text {
+          font-size: .75rem;
+          font-family: ibm-plex-sans;
+        }
+      }
     }
 
+    .data-vis-tools {
+      align-self: center;
+
+      margin: 100px 50px;
+      display: flex;
+      flex-direction: column;
+
+      .bx--toggle__label {
+        margin: .5rem;
+        font-size: .875rem;
+
+        .bx--toggle__appearance {
+          font-size: .875rem;
+          margin-right: .5rem;
+        }
+      }
+    }
+  }
+
+  .data-vis-footer {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    p {
+      text-align: center;
+      font-size: .75rem;
+    }
   }
 }

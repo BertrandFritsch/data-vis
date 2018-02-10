@@ -104,8 +104,8 @@
     },
     "mapCoverage": true,
     "collectCoverageFrom": [
-      "src/{components,contexts}/**/*.{ts,tsx}",
-      "!src/{components,contexts}/**/*.spec.{ts,tsx}"
+      "src/{contexts}/**/*.{ts,tsx}",
+      "!src/{contexts}/**/*.spec.{ts,tsx}"
     ]
   }
 }

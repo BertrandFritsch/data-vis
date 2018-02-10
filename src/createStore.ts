@@ -1,8 +1,7 @@
 import { applyMiddleware, combineReducers, compose, createStore, Store as ReduxStore } from 'redux';
 import createSagaMiddleware from 'redux-saga';
 
-import mainFrameReducers, { MainFrameState, State as MainFrameInnerState} from './contexts/mainframe/_module_/reducers';
-import mainFrameSagas from './contexts/mainframe/_module_/sagas';
+import mainFrameReducers, { MainFrameState } from './contexts/mainframe/_module_/reducers';
 
 const nodeProcess = typeof process !== 'undefined' && process;
 const isTestEnv = nodeProcess && nodeProcess.env.NODE_ENV === 'test';
@@ -28,12 +27,5 @@ const finalCreateStore = !isTestEnv ? composeEnhancers(
  */
 export type Store = ReduxStore<MainFrameState>;
 const store: Store = finalCreateStore(combineReducers({ mainFrame: mainFrameReducers.mainFrame }));
-
-/**
- * Start the sagas
- */
-if (!isTestEnv) {
-  sagaMiddleware.run(mainFrameSagas);
-}
 
 export default store;

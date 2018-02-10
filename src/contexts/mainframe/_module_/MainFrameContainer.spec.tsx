@@ -3,10 +3,12 @@ import * as React from 'react';
 import { Provider } from 'react-redux';
 import { createStore, Store } from 'redux';
 import { MainFrameState } from './reducers';
-import { data } from '../../../../data/data';
+
+// tslint:disable-next-line no-var-requires
+const data = require('../../../../data/data.json');
 
 const MainFrame = (props: MainFrameProps) =>
-  <div>{ props.data.map((n, i) => <p key={ i }>{ n.Year }</p>) }</div>;
+  <div>{ props.data.map((n, i) => <p key={ i }>{ n.place }</p>) }</div>;
 
 jest.mock('./MainFrame', () => ({ default: MainFrame }));
 
