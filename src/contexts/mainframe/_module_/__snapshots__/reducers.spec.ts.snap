@@ -2350,5 +2350,77 @@ Object {
       "Year": 2017,
     },
   ],
+  "placeProperties": Object {
+    "24N-44N": Object {
+      "color": "#3bbbce",
+      "order": 5,
+      "text": "24N-44N",
+    },
+    "24N-90N": Object {
+      "color": "#5b924e",
+      "order": 2,
+      "text": "24N-90N",
+    },
+    "24S-24N": Object {
+      "color": "#cc4c76",
+      "order": 7,
+      "text": "24S-24N",
+    },
+    "24S-EQU": Object {
+      "color": "#5a5b12",
+      "order": 8,
+      "text": "24S-EQU",
+    },
+    "44N-64N": Object {
+      "color": "#ab5fab",
+      "order": 4,
+      "text": "44N-64N",
+    },
+    "44S-24S": Object {
+      "color": "#416920",
+      "order": 9,
+      "text": "44S-24S",
+    },
+    "64N-90N": Object {
+      "color": "#fc9127",
+      "order": 3,
+      "text": "64N-90N",
+    },
+    "64S-44S": Object {
+      "color": "#f25d22",
+      "order": 10,
+      "text": "64S-44S",
+    },
+    "90S-24S": Object {
+      "color": "#7c213e",
+      "order": 12,
+      "text": "90S-24S",
+    },
+    "90S-64S": Object {
+      "color": "#3e587a",
+      "order": 11,
+      "text": "90S-64S",
+    },
+    "EQU-24N": Object {
+      "color": "#0712be",
+      "order": 6,
+      "text": "EQU-24N",
+    },
+    "Glob": Object {
+      "color": "#ff0000",
+      "order": 0,
+      "text": "Global",
+    },
+    "NHem": Object {
+      "color": "#0391f9",
+      "order": 1,
+      "text": "North hemisphere",
+    },
+    "SHem": Object {
+      "color": "#310035",
+      "order": 13,
+      "text": "South hemisphere",
+    },
+  },
 }
 `;

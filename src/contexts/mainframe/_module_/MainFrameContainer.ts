@@ -1,19 +1,24 @@
 import { connect } from 'react-redux';
 import MainFrame from './MainFrame';
-import { MainFrameState, RawRecord, TemperaturesByPlace, WorldPlace } from './reducers';
+import { MainFrameState, PlaceProperties, RawRecord, TemperaturesByPlace, WorldPlace } from './reducers';
 import { createSelector } from 'reselect';
 
-export const transformData = (data: RawRecord[]) => ({
+function sortPlaces(placeProperties: PlaceProperties) {
+  const keys = Object.keys(placeProperties) as WorldPlace[];
+  keys.sort((a, b) => placeProperties[ a ].order - placeProperties[ b ].order);
+  return keys;
+}
+
+export const transformData = (data: RawRecord[], placeProperties: PlaceProperties) => ({
   data: data.length > 0
-    ? Object.keys(data[ 0 ])
-            .filter(key => key !== 'Year')
-            .map(key => ({
-              place: key,
-              values: data.map(r => ({
-                date: new Date(r.Year, 0, 1),
-                temperature: r[ key as WorldPlace ]
-              }))
-            })) as TemperaturesByPlace[]
+    ? sortPlaces(placeProperties)
+          .map(key => ({
+            place: key,
+            values: data.map(r => ({
+              date: new Date(r.Year, 0, 1),
+              temperature: r[ key as WorldPlace ]
+            }))
+          })) as TemperaturesByPlace[]
     : [],
   ...data.reduce((minMax, r) => {
       const values = Object.keys(r).filter(k => k !== 'Year' && r[ k as WorldPlace ] !== null).map(k => r[ k as WorldPlace ]!);
@@ -29,7 +34,11 @@ export const transformData = (data: RawRecord[]) => ({
 
 const getMaxMinValues = createSelector(
   (state: MainFrameState) => state.mainFrame.data,
-  data => transformData(data)
+  (state: MainFrameState) => state.mainFrame.placeProperties,
+  (data, placeProperties) => ({
+    ...transformData(data, placeProperties),
+    placeProperties
+  })
 );
 
 const mapStateToProps = (state: MainFrameState) => getMaxMinValues(state);

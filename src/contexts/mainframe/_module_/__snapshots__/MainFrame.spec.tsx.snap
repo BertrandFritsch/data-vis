@@ -481,7 +481,7 @@ exports[`<MainFrame /> should adapt when the window is resized 1`] = `
               <path
                 class="data-vis-line"
                 d="M0,701L67,734L920,329"
-                style="stroke: #1f77b4;"
+                style="stroke: #ff0000;"
               />
             </g>
           </g>
@@ -491,7 +491,7 @@ exports[`<MainFrame /> should adapt when the window is resized 1`] = `
         class="data-vis-tools"
       >
         <div
-          style="color: rgb(31, 119, 180);"
+          style="color: rgb(255, 0, 0);"
         >
           <div
             class="bx--form-item"
@@ -510,12 +510,12 @@ exports[`<MainFrame /> should adapt when the window is resized 1`] = `
               <span
                 class="bx--toggle__appearance"
               />
-              Glob
+              Global
             </label>
           </div>
         </div>
         <div
-          style="color: rgb(174, 199, 232);"
+          style="color: rgb(3, 145, 249);"
         >
           <div
             class="bx--form-item"
@@ -534,36 +534,12 @@ exports[`<MainFrame /> should adapt when the window is resized 1`] = `
               <span
                 class="bx--toggle__appearance"
               />
-              NHem
+              North hemisphere
             </label>
           </div>
         </div>
         <div
-          style="color: rgb(255, 127, 14);"
-        >
-          <div
-            class="bx--form-item"
-          >
-            <input
-              aria-label="Label Name"
-              class="bx--toggle bx--toggle--small"
-              id="toggle-SHem"
-              type="checkbox"
-              value="on"
-            />
-            <label
-              class="bx--toggle__label"
-              for="toggle-SHem"
-            >
-              <span
-                class="bx--toggle__appearance"
-              />
-              SHem
-            </label>
-          </div>
-        </div>
-        <div
-          style="color: rgb(255, 187, 120);"
+          style="color: rgb(91, 146, 78);"
         >
           <div
             class="bx--form-item"
@@ -587,55 +563,7 @@ exports[`<MainFrame /> should adapt when the window is resized 1`] = `
           </div>
         </div>
         <div
-          style="color: rgb(44, 160, 44);"
-        >
-          <div
-            class="bx--form-item"
-          >
-            <input
-              aria-label="Label Name"
-              class="bx--toggle bx--toggle--small"
-              id="toggle-24S-24N"
-              type="checkbox"
-              value="on"
-            />
-            <label
-              class="bx--toggle__label"
-              for="toggle-24S-24N"
-            >
-              <span
-                class="bx--toggle__appearance"
-              />
-              24S-24N
-            </label>
-          </div>
-        </div>
-        <div
-          style="color: rgb(152, 223, 138);"
-        >
-          <div
-            class="bx--form-item"
-          >
-            <input
-              aria-label="Label Name"
-              class="bx--toggle bx--toggle--small"
-              id="toggle-90S-24S"
-              type="checkbox"
-              value="on"
-            />
-            <label
-              class="bx--toggle__label"
-              for="toggle-90S-24S"
-            >
-              <span
-                class="bx--toggle__appearance"
-              />
-              90S-24S
-            </label>
-          </div>
-        </div>
-        <div
-          style="color: rgb(214, 39, 40);"
+          style="color: rgb(252, 145, 39);"
         >
           <div
             class="bx--form-item"
@@ -659,7 +587,7 @@ exports[`<MainFrame /> should adapt when the window is resized 1`] = `
           </div>
         </div>
         <div
-          style="color: rgb(255, 152, 150);"
+          style="color: rgb(171, 95, 171);"
         >
           <div
             class="bx--form-item"
@@ -683,7 +611,7 @@ exports[`<MainFrame /> should adapt when the window is resized 1`] = `
           </div>
         </div>
         <div
-          style="color: rgb(148, 103, 189);"
+          style="color: rgb(59, 187, 206);"
         >
           <div
             class="bx--form-item"
@@ -707,7 +635,7 @@ exports[`<MainFrame /> should adapt when the window is resized 1`] = `
           </div>
         </div>
         <div
-          style="color: rgb(197, 176, 213);"
+          style="color: rgb(7, 18, 190);"
         >
           <div
             class="bx--form-item"
@@ -731,7 +659,31 @@ exports[`<MainFrame /> should adapt when the window is resized 1`] = `
           </div>
         </div>
         <div
-          style="color: rgb(140, 86, 75);"
+          style="color: rgb(204, 76, 118);"
+        >
+          <div
+            class="bx--form-item"
+          >
+            <input
+              aria-label="Label Name"
+              class="bx--toggle bx--toggle--small"
+              id="toggle-24S-24N"
+              type="checkbox"
+              value="on"
+            />
+            <label
+              class="bx--toggle__label"
+              for="toggle-24S-24N"
+            >
+              <span
+                class="bx--toggle__appearance"
+              />
+              24S-24N
+            </label>
+          </div>
+        </div>
+        <div
+          style="color: rgb(90, 91, 18);"
         >
           <div
             class="bx--form-item"
@@ -755,7 +707,7 @@ exports[`<MainFrame /> should adapt when the window is resized 1`] = `
           </div>
         </div>
         <div
-          style="color: rgb(196, 156, 148);"
+          style="color: rgb(65, 105, 32);"
         >
           <div
             class="bx--form-item"
@@ -779,7 +731,7 @@ exports[`<MainFrame /> should adapt when the window is resized 1`] = `
           </div>
         </div>
         <div
-          style="color: rgb(227, 119, 194);"
+          style="color: rgb(242, 93, 34);"
         >
           <div
             class="bx--form-item"
@@ -803,7 +755,7 @@ exports[`<MainFrame /> should adapt when the window is resized 1`] = `
           </div>
         </div>
         <div
-          style="color: rgb(247, 182, 210);"
+          style="color: rgb(62, 88, 122);"
         >
           <div
             class="bx--form-item"
@@ -823,6 +775,54 @@ exports[`<MainFrame /> should adapt when the window is resized 1`] = `
                 class="bx--toggle__appearance"
               />
               90S-64S
+            </label>
+          </div>
+        </div>
+        <div
+          style="color: rgb(124, 33, 62);"
+        >
+          <div
+            class="bx--form-item"
+          >
+            <input
+              aria-label="Label Name"
+              class="bx--toggle bx--toggle--small"
+              id="toggle-90S-24S"
+              type="checkbox"
+              value="on"
+            />
+            <label
+              class="bx--toggle__label"
+              for="toggle-90S-24S"
+            >
+              <span
+                class="bx--toggle__appearance"
+              />
+              90S-24S
+            </label>
+          </div>
+        </div>
+        <div
+          style="color: rgb(49, 0, 53);"
+        >
+          <div
+            class="bx--form-item"
+          >
+            <input
+              aria-label="Label Name"
+              class="bx--toggle bx--toggle--small"
+              id="toggle-SHem"
+              type="checkbox"
+              value="on"
+            />
+            <label
+              class="bx--toggle__label"
+              for="toggle-SHem"
+            >
+              <span
+                class="bx--toggle__appearance"
+              />
+              South hemisphere
             </label>
           </div>
         </div>
@@ -1327,7 +1327,7 @@ exports[`<MainFrame /> should add a line when toggling a zone selector 1`] = `
               <path
                 class="data-vis-line"
                 d="M0,701L67,734L920,329"
-                style="stroke: #1f77b4;"
+                style="stroke: #ff0000;"
               />
             </g>
             <g
@@ -1336,7 +1336,7 @@ exports[`<MainFrame /> should add a line when toggling a zone selector 1`] = `
               <path
                 class="data-vis-line"
                 d="M0,758L67,734L920,271"
-                style="stroke: #aec7e8;"
+                style="stroke: #0391f9;"
               />
             </g>
           </g>
@@ -1346,7 +1346,7 @@ exports[`<MainFrame /> should add a line when toggling a zone selector 1`] = `
         class="data-vis-tools"
       >
         <div
-          style="color: rgb(31, 119, 180);"
+          style="color: rgb(255, 0, 0);"
         >
           <div
             class="bx--form-item"
@@ -1365,12 +1365,12 @@ exports[`<MainFrame /> should add a line when toggling a zone selector 1`] = `
               <span
                 class="bx--toggle__appearance"
               />
-              Glob
+              Global
             </label>
           </div>
         </div>
         <div
-          style="color: rgb(174, 199, 232);"
+          style="color: rgb(3, 145, 249);"
         >
           <div
             class="bx--form-item"
@@ -1389,36 +1389,12 @@ exports[`<MainFrame /> should add a line when toggling a zone selector 1`] = `
               <span
                 class="bx--toggle__appearance"
               />
-              NHem
+              North hemisphere
             </label>
           </div>
         </div>
         <div
-          style="color: rgb(255, 127, 14);"
-        >
-          <div
-            class="bx--form-item"
-          >
-            <input
-              aria-label="Label Name"
-              class="bx--toggle bx--toggle--small"
-              id="toggle-SHem"
-              type="checkbox"
-              value="on"
-            />
-            <label
-              class="bx--toggle__label"
-              for="toggle-SHem"
-            >
-              <span
-                class="bx--toggle__appearance"
-              />
-              SHem
-            </label>
-          </div>
-        </div>
-        <div
-          style="color: rgb(255, 187, 120);"
+          style="color: rgb(91, 146, 78);"
         >
           <div
             class="bx--form-item"
@@ -1442,55 +1418,7 @@ exports[`<MainFrame /> should add a line when toggling a zone selector 1`] = `
           </div>
         </div>
         <div
-          style="color: rgb(44, 160, 44);"
-        >
-          <div
-            class="bx--form-item"
-          >
-            <input
-              aria-label="Label Name"
-              class="bx--toggle bx--toggle--small"
-              id="toggle-24S-24N"
-              type="checkbox"
-              value="on"
-            />
-            <label
-              class="bx--toggle__label"
-              for="toggle-24S-24N"
-            >
-              <span
-                class="bx--toggle__appearance"
-              />
-              24S-24N
-            </label>
-          </div>
-        </div>
-        <div
-          style="color: rgb(152, 223, 138);"
-        >
-          <div
-            class="bx--form-item"
-          >
-            <input
-              aria-label="Label Name"
-              class="bx--toggle bx--toggle--small"
-              id="toggle-90S-24S"
-              type="checkbox"
-              value="on"
-            />
-            <label
-              class="bx--toggle__label"
-              for="toggle-90S-24S"
-            >
-              <span
-                class="bx--toggle__appearance"
-              />
-              90S-24S
-            </label>
-          </div>
-        </div>
-        <div
-          style="color: rgb(214, 39, 40);"
+          style="color: rgb(252, 145, 39);"
         >
           <div
             class="bx--form-item"
@@ -1514,7 +1442,7 @@ exports[`<MainFrame /> should add a line when toggling a zone selector 1`] = `
           </div>
         </div>
         <div
-          style="color: rgb(255, 152, 150);"
+          style="color: rgb(171, 95, 171);"
         >
           <div
             class="bx--form-item"
@@ -1538,7 +1466,7 @@ exports[`<MainFrame /> should add a line when toggling a zone selector 1`] = `
           </div>
         </div>
         <div
-          style="color: rgb(148, 103, 189);"
+          style="color: rgb(59, 187, 206);"
         >
           <div
             class="bx--form-item"
@@ -1562,7 +1490,7 @@ exports[`<MainFrame /> should add a line when toggling a zone selector 1`] = `
           </div>
         </div>
         <div
-          style="color: rgb(197, 176, 213);"
+          style="color: rgb(7, 18, 190);"
         >
           <div
             class="bx--form-item"
@@ -1586,7 +1514,31 @@ exports[`<MainFrame /> should add a line when toggling a zone selector 1`] = `
           </div>
         </div>
         <div
-          style="color: rgb(140, 86, 75);"
+          style="color: rgb(204, 76, 118);"
+        >
+          <div
+            class="bx--form-item"
+          >
+            <input
+              aria-label="Label Name"
+              class="bx--toggle bx--toggle--small"
+              id="toggle-24S-24N"
+              type="checkbox"
+              value="on"
+            />
+            <label
+              class="bx--toggle__label"
+              for="toggle-24S-24N"
+            >
+              <span
+                class="bx--toggle__appearance"
+              />
+              24S-24N
+            </label>
+          </div>
+        </div>
+        <div
+          style="color: rgb(90, 91, 18);"
         >
           <div
             class="bx--form-item"
@@ -1610,7 +1562,7 @@ exports[`<MainFrame /> should add a line when toggling a zone selector 1`] = `
           </div>
         </div>
         <div
-          style="color: rgb(196, 156, 148);"
+          style="color: rgb(65, 105, 32);"
         >
           <div
             class="bx--form-item"
@@ -1634,7 +1586,7 @@ exports[`<MainFrame /> should add a line when toggling a zone selector 1`] = `
           </div>
         </div>
         <div
-          style="color: rgb(227, 119, 194);"
+          style="color: rgb(242, 93, 34);"
         >
           <div
             class="bx--form-item"
@@ -1658,7 +1610,7 @@ exports[`<MainFrame /> should add a line when toggling a zone selector 1`] = `
           </div>
         </div>
         <div
-          style="color: rgb(247, 182, 210);"
+          style="color: rgb(62, 88, 122);"
         >
           <div
             class="bx--form-item"
@@ -1678,6 +1630,54 @@ exports[`<MainFrame /> should add a line when toggling a zone selector 1`] = `
                 class="bx--toggle__appearance"
               />
               90S-64S
+            </label>
+          </div>
+        </div>
+        <div
+          style="color: rgb(124, 33, 62);"
+        >
+          <div
+            class="bx--form-item"
+          >
+            <input
+              aria-label="Label Name"
+              class="bx--toggle bx--toggle--small"
+              id="toggle-90S-24S"
+              type="checkbox"
+              value="on"
+            />
+            <label
+              class="bx--toggle__label"
+              for="toggle-90S-24S"
+            >
+              <span
+                class="bx--toggle__appearance"
+              />
+              90S-24S
+            </label>
+          </div>
+        </div>
+        <div
+          style="color: rgb(49, 0, 53);"
+        >
+          <div
+            class="bx--form-item"
+          >
+            <input
+              aria-label="Label Name"
+              class="bx--toggle bx--toggle--small"
+              id="toggle-SHem"
+              type="checkbox"
+              value="on"
+            />
+            <label
+              class="bx--toggle__label"
+              for="toggle-SHem"
+            >
+              <span
+                class="bx--toggle__appearance"
+              />
+              South hemisphere
             </label>
           </div>
         </div>
@@ -2182,7 +2182,7 @@ exports[`<MainFrame /> should add a line when toggling a zone selector 2`] = `
               <path
                 class="data-vis-line"
                 d="M0,701L67,734L920,329"
-                style="stroke: #1f77b4;"
+                style="stroke: #ff0000;"
               />
             </g>
           </g>
@@ -2192,7 +2192,7 @@ exports[`<MainFrame /> should add a line when toggling a zone selector 2`] = `
         class="data-vis-tools"
       >
         <div
-          style="color: rgb(31, 119, 180);"
+          style="color: rgb(255, 0, 0);"
         >
           <div
             class="bx--form-item"
@@ -2211,12 +2211,12 @@ exports[`<MainFrame /> should add a line when toggling a zone selector 2`] = `
               <span
                 class="bx--toggle__appearance"
               />
-              Glob
+              Global
             </label>
           </div>
         </div>
         <div
-          style="color: rgb(174, 199, 232);"
+          style="color: rgb(3, 145, 249);"
         >
           <div
             class="bx--form-item"
@@ -2235,36 +2235,12 @@ exports[`<MainFrame /> should add a line when toggling a zone selector 2`] = `
               <span
                 class="bx--toggle__appearance"
               />
-              NHem
+              North hemisphere
             </label>
           </div>
         </div>
         <div
-          style="color: rgb(255, 127, 14);"
-        >
-          <div
-            class="bx--form-item"
-          >
-            <input
-              aria-label="Label Name"
-              class="bx--toggle bx--toggle--small"
-              id="toggle-SHem"
-              type="checkbox"
-              value="on"
-            />
-            <label
-              class="bx--toggle__label"
-              for="toggle-SHem"
-            >
-              <span
-                class="bx--toggle__appearance"
-              />
-              SHem
-            </label>
-          </div>
-        </div>
-        <div
-          style="color: rgb(255, 187, 120);"
+          style="color: rgb(91, 146, 78);"
         >
           <div
             class="bx--form-item"
@@ -2288,55 +2264,7 @@ exports[`<MainFrame /> should add a line when toggling a zone selector 2`] = `
           </div>
         </div>
         <div
-          style="color: rgb(44, 160, 44);"
-        >
-          <div
-            class="bx--form-item"
-          >
-            <input
-              aria-label="Label Name"
-              class="bx--toggle bx--toggle--small"
-              id="toggle-24S-24N"
-              type="checkbox"
-              value="on"
-            />
-            <label
-              class="bx--toggle__label"
-              for="toggle-24S-24N"
-            >
-              <span
-                class="bx--toggle__appearance"
-              />
-              24S-24N
-            </label>
-          </div>
-        </div>
-        <div
-          style="color: rgb(152, 223, 138);"
-        >
-          <div
-            class="bx--form-item"
-          >
-            <input
-              aria-label="Label Name"
-              class="bx--toggle bx--toggle--small"
-              id="toggle-90S-24S"
-              type="checkbox"
-              value="on"
-            />
-            <label
-              class="bx--toggle__label"
-              for="toggle-90S-24S"
-            >
-              <span
-                class="bx--toggle__appearance"
-              />
-              90S-24S
-            </label>
-          </div>
-        </div>
-        <div
-          style="color: rgb(214, 39, 40);"
+          style="color: rgb(252, 145, 39);"
         >
           <div
             class="bx--form-item"
@@ -2360,7 +2288,7 @@ exports[`<MainFrame /> should add a line when toggling a zone selector 2`] = `
           </div>
         </div>
         <div
-          style="color: rgb(255, 152, 150);"
+          style="color: rgb(171, 95, 171);"
         >
           <div
             class="bx--form-item"
@@ -2384,7 +2312,7 @@ exports[`<MainFrame /> should add a line when toggling a zone selector 2`] = `
           </div>
         </div>
         <div
-          style="color: rgb(148, 103, 189);"
+          style="color: rgb(59, 187, 206);"
         >
           <div
             class="bx--form-item"
@@ -2408,7 +2336,7 @@ exports[`<MainFrame /> should add a line when toggling a zone selector 2`] = `
           </div>
         </div>
         <div
-          style="color: rgb(197, 176, 213);"
+          style="color: rgb(7, 18, 190);"
         >
           <div
             class="bx--form-item"
@@ -2432,7 +2360,31 @@ exports[`<MainFrame /> should add a line when toggling a zone selector 2`] = `
           </div>
         </div>
         <div
-          style="color: rgb(140, 86, 75);"
+          style="color: rgb(204, 76, 118);"
+        >
+          <div
+            class="bx--form-item"
+          >
+            <input
+              aria-label="Label Name"
+              class="bx--toggle bx--toggle--small"
+              id="toggle-24S-24N"
+              type="checkbox"
+              value="on"
+            />
+            <label
+              class="bx--toggle__label"
+              for="toggle-24S-24N"
+            >
+              <span
+                class="bx--toggle__appearance"
+              />
+              24S-24N
+            </label>
+          </div>
+        </div>
+        <div
+          style="color: rgb(90, 91, 18);"
         >
           <div
             class="bx--form-item"
@@ -2456,7 +2408,7 @@ exports[`<MainFrame /> should add a line when toggling a zone selector 2`] = `
           </div>
         </div>
         <div
-          style="color: rgb(196, 156, 148);"
+          style="color: rgb(65, 105, 32);"
         >
           <div
             class="bx--form-item"
@@ -2480,7 +2432,7 @@ exports[`<MainFrame /> should add a line when toggling a zone selector 2`] = `
           </div>
         </div>
         <div
-          style="color: rgb(227, 119, 194);"
+          style="color: rgb(242, 93, 34);"
         >
           <div
             class="bx--form-item"
@@ -2504,7 +2456,7 @@ exports[`<MainFrame /> should add a line when toggling a zone selector 2`] = `
           </div>
         </div>
         <div
-          style="color: rgb(247, 182, 210);"
+          style="color: rgb(62, 88, 122);"
         >
           <div
             class="bx--form-item"
@@ -2524,6 +2476,54 @@ exports[`<MainFrame /> should add a line when toggling a zone selector 2`] = `
                 class="bx--toggle__appearance"
               />
               90S-64S
+            </label>
+          </div>
+        </div>
+        <div
+          style="color: rgb(124, 33, 62);"
+        >
+          <div
+            class="bx--form-item"
+          >
+            <input
+              aria-label="Label Name"
+              class="bx--toggle bx--toggle--small"
+              id="toggle-90S-24S"
+              type="checkbox"
+              value="on"
+            />
+            <label
+              class="bx--toggle__label"
+              for="toggle-90S-24S"
+            >
+              <span
+                class="bx--toggle__appearance"
+              />
+              90S-24S
+            </label>
+          </div>
+        </div>
+        <div
+          style="color: rgb(49, 0, 53);"
+        >
+          <div
+            class="bx--form-item"
+          >
+            <input
+              aria-label="Label Name"
+              class="bx--toggle bx--toggle--small"
+              id="toggle-SHem"
+              type="checkbox"
+              value="on"
+            />
+            <label
+              class="bx--toggle__label"
+              for="toggle-SHem"
+            >
+              <span
+                class="bx--toggle__appearance"
+              />
+              South hemisphere
             </label>
           </div>
         </div>
@@ -2579,7 +2579,7 @@ exports[`<MainFrame /> should render correctly 1`] = `
         key="Glob"
         style={
           Object {
-            "color": "#1f77b4",
+            "color": "#ff0000",
           }
         }
       >
@@ -2601,7 +2601,7 @@ exports[`<MainFrame /> should render correctly 1`] = `
             <span
               className="bx--toggle__appearance"
             />
-            Glob
+            Global
           </label>
         </div>
       </div>
@@ -2609,7 +2609,7 @@ exports[`<MainFrame /> should render correctly 1`] = `
         key="NHem"
         style={
           Object {
-            "color": "#aec7e8",
+            "color": "#0391f9",
           }
         }
       >
@@ -2631,37 +2631,7 @@ exports[`<MainFrame /> should render correctly 1`] = `
             <span
               className="bx--toggle__appearance"
             />
-            NHem
-          </label>
-        </div>
-      </div>
-      <div
-        key="SHem"
-        style={
-          Object {
-            "color": "#ff7f0e",
-          }
-        }
-      >
-        <div
-          className="bx--form-item"
-        >
-          <input
-            aria-label="Label Name"
-            checked={false}
-            className="bx--toggle bx--toggle--small"
-            id="toggle-SHem"
-            onChange={[Function]}
-            type="checkbox"
-          />
-          <label
-            className="bx--toggle__label"
-            htmlFor="toggle-SHem"
-          >
-            <span
-              className="bx--toggle__appearance"
-            />
-            SHem
+            North hemisphere
           </label>
         </div>
       </div>
@@ -2669,7 +2639,7 @@ exports[`<MainFrame /> should render correctly 1`] = `
         key="24N-90N"
         style={
           Object {
-            "color": "#ffbb78",
+            "color": "#5b924e",
           }
         }
       >
@@ -2696,70 +2666,10 @@ exports[`<MainFrame /> should render correctly 1`] = `
         </div>
       </div>
       <div
-        key="24S-24N"
-        style={
-          Object {
-            "color": "#2ca02c",
-          }
-        }
-      >
-        <div
-          className="bx--form-item"
-        >
-          <input
-            aria-label="Label Name"
-            checked={false}
-            className="bx--toggle bx--toggle--small"
-            id="toggle-24S-24N"
-            onChange={[Function]}
-            type="checkbox"
-          />
-          <label
-            className="bx--toggle__label"
-            htmlFor="toggle-24S-24N"
-          >
-            <span
-              className="bx--toggle__appearance"
-            />
-            24S-24N
-          </label>
-        </div>
-      </div>
-      <div
-        key="90S-24S"
-        style={
-          Object {
-            "color": "#98df8a",
-          }
-        }
-      >
-        <div
-          className="bx--form-item"
-        >
-          <input
-            aria-label="Label Name"
-            checked={false}
-            className="bx--toggle bx--toggle--small"
-            id="toggle-90S-24S"
-            onChange={[Function]}
-            type="checkbox"
-          />
-          <label
-            className="bx--toggle__label"
-            htmlFor="toggle-90S-24S"
-          >
-            <span
-              className="bx--toggle__appearance"
-            />
-            90S-24S
-          </label>
-        </div>
-      </div>
-      <div
         key="64N-90N"
         style={
           Object {
-            "color": "#d62728",
+            "color": "#fc9127",
           }
         }
       >
@@ -2789,7 +2699,7 @@ exports[`<MainFrame /> should render correctly 1`] = `
         key="44N-64N"
         style={
           Object {
-            "color": "#ff9896",
+            "color": "#ab5fab",
           }
         }
       >
@@ -2819,7 +2729,7 @@ exports[`<MainFrame /> should render correctly 1`] = `
         key="24N-44N"
         style={
           Object {
-            "color": "#9467bd",
+            "color": "#3bbbce",
           }
         }
       >
@@ -2849,7 +2759,7 @@ exports[`<MainFrame /> should render correctly 1`] = `
         key="EQU-24N"
         style={
           Object {
-            "color": "#c5b0d5",
+            "color": "#0712be",
           }
         }
       >
@@ -2876,10 +2786,40 @@ exports[`<MainFrame /> should render correctly 1`] = `
         </div>
       </div>
       <div
+        key="24S-24N"
+        style={
+          Object {
+            "color": "#cc4c76",
+          }
+        }
+      >
+        <div
+          className="bx--form-item"
+        >
+          <input
+            aria-label="Label Name"
+            checked={false}
+            className="bx--toggle bx--toggle--small"
+            id="toggle-24S-24N"
+            onChange={[Function]}
+            type="checkbox"
+          />
+          <label
+            className="bx--toggle__label"
+            htmlFor="toggle-24S-24N"
+          >
+            <span
+              className="bx--toggle__appearance"
+            />
+            24S-24N
+          </label>
+        </div>
+      </div>
+      <div
         key="24S-EQU"
         style={
           Object {
-            "color": "#8c564b",
+            "color": "#5a5b12",
           }
         }
       >
@@ -2909,7 +2849,7 @@ exports[`<MainFrame /> should render correctly 1`] = `
         key="44S-24S"
         style={
           Object {
-            "color": "#c49c94",
+            "color": "#416920",
           }
         }
       >
@@ -2939,7 +2879,7 @@ exports[`<MainFrame /> should render correctly 1`] = `
         key="64S-44S"
         style={
           Object {
-            "color": "#e377c2",
+            "color": "#f25d22",
           }
         }
       >
@@ -2969,7 +2909,7 @@ exports[`<MainFrame /> should render correctly 1`] = `
         key="90S-64S"
         style={
           Object {
-            "color": "#f7b6d2",
+            "color": "#3e587a",
           }
         }
       >
@@ -2992,6 +2932,66 @@ exports[`<MainFrame /> should render correctly 1`] = `
               className="bx--toggle__appearance"
             />
             90S-64S
+          </label>
+        </div>
+      </div>
+      <div
+        key="90S-24S"
+        style={
+          Object {
+            "color": "#7c213e",
+          }
+        }
+      >
+        <div
+          className="bx--form-item"
+        >
+          <input
+            aria-label="Label Name"
+            checked={false}
+            className="bx--toggle bx--toggle--small"
+            id="toggle-90S-24S"
+            onChange={[Function]}
+            type="checkbox"
+          />
+          <label
+            className="bx--toggle__label"
+            htmlFor="toggle-90S-24S"
+          >
+            <span
+              className="bx--toggle__appearance"
+            />
+            90S-24S
+          </label>
+        </div>
+      </div>
+      <div
+        key="SHem"
+        style={
+          Object {
+            "color": "#310035",
+          }
+        }
+      >
+        <div
+          className="bx--form-item"
+        >
+          <input
+            aria-label="Label Name"
+            checked={false}
+            className="bx--toggle bx--toggle--small"
+            id="toggle-SHem"
+            onChange={[Function]}
+            type="checkbox"
+          />
+          <label
+            className="bx--toggle__label"
+            htmlFor="toggle-SHem"
+          >
+            <span
+              className="bx--toggle__appearance"
+            />
+            South hemisphere
           </label>
         </div>
       </div>
@@ -3497,7 +3497,7 @@ exports[`<MainFrame /> should render the svg element 1`] = `
               <path
                 class="data-vis-line"
                 d="M0,701L67,734L920,329"
-                style="stroke: #1f77b4;"
+                style="stroke: #ff0000;"
               />
             </g>
           </g>
@@ -3507,7 +3507,7 @@ exports[`<MainFrame /> should render the svg element 1`] = `
         class="data-vis-tools"
       >
         <div
-          style="color: rgb(31, 119, 180);"
+          style="color: rgb(255, 0, 0);"
         >
           <div
             class="bx--form-item"
@@ -3526,12 +3526,12 @@ exports[`<MainFrame /> should render the svg element 1`] = `
               <span
                 class="bx--toggle__appearance"
               />
-              Glob
+              Global
             </label>
           </div>
         </div>
         <div
-          style="color: rgb(174, 199, 232);"
+          style="color: rgb(3, 145, 249);"
         >
           <div
             class="bx--form-item"
@@ -3550,36 +3550,12 @@ exports[`<MainFrame /> should render the svg element 1`] = `
               <span
                 class="bx--toggle__appearance"
               />
-              NHem
+              North hemisphere
             </label>
           </div>
         </div>
         <div
-          style="color: rgb(255, 127, 14);"
-        >
-          <div
-            class="bx--form-item"
-          >
-            <input
-              aria-label="Label Name"
-              class="bx--toggle bx--toggle--small"
-              id="toggle-SHem"
-              type="checkbox"
-              value="on"
-            />
-            <label
-              class="bx--toggle__label"
-              for="toggle-SHem"
-            >
-              <span
-                class="bx--toggle__appearance"
-              />
-              SHem
-            </label>
-          </div>
-        </div>
-        <div
-          style="color: rgb(255, 187, 120);"
+          style="color: rgb(91, 146, 78);"
         >
           <div
             class="bx--form-item"
@@ -3603,55 +3579,7 @@ exports[`<MainFrame /> should render the svg element 1`] = `
           </div>
         </div>
         <div
-          style="color: rgb(44, 160, 44);"
-        >
-          <div
-            class="bx--form-item"
-          >
-            <input
-              aria-label="Label Name"
-              class="bx--toggle bx--toggle--small"
-              id="toggle-24S-24N"
-              type="checkbox"
-              value="on"
-            />
-            <label
-              class="bx--toggle__label"
-              for="toggle-24S-24N"
-            >
-              <span
-                class="bx--toggle__appearance"
-              />
-              24S-24N
-            </label>
-          </div>
-        </div>
-        <div
-          style="color: rgb(152, 223, 138);"
-        >
-          <div
-            class="bx--form-item"
-          >
-            <input
-              aria-label="Label Name"
-              class="bx--toggle bx--toggle--small"
-              id="toggle-90S-24S"
-              type="checkbox"
-              value="on"
-            />
-            <label
-              class="bx--toggle__label"
-              for="toggle-90S-24S"
-            >
-              <span
-                class="bx--toggle__appearance"
-              />
-              90S-24S
-            </label>
-          </div>
-        </div>
-        <div
-          style="color: rgb(214, 39, 40);"
+          style="color: rgb(252, 145, 39);"
         >
           <div
             class="bx--form-item"
@@ -3675,7 +3603,7 @@ exports[`<MainFrame /> should render the svg element 1`] = `
           </div>
         </div>
         <div
-          style="color: rgb(255, 152, 150);"
+          style="color: rgb(171, 95, 171);"
         >
           <div
             class="bx--form-item"
@@ -3699,7 +3627,7 @@ exports[`<MainFrame /> should render the svg element 1`] = `
           </div>
         </div>
         <div
-          style="color: rgb(148, 103, 189);"
+          style="color: rgb(59, 187, 206);"
         >
           <div
             class="bx--form-item"
@@ -3723,7 +3651,7 @@ exports[`<MainFrame /> should render the svg element 1`] = `
           </div>
         </div>
         <div
-          style="color: rgb(197, 176, 213);"
+          style="color: rgb(7, 18, 190);"
         >
           <div
             class="bx--form-item"
@@ -3747,7 +3675,31 @@ exports[`<MainFrame /> should render the svg element 1`] = `
           </div>
         </div>
         <div
-          style="color: rgb(140, 86, 75);"
+          style="color: rgb(204, 76, 118);"
+        >
+          <div
+            class="bx--form-item"
+          >
+            <input
+              aria-label="Label Name"
+              class="bx--toggle bx--toggle--small"
+              id="toggle-24S-24N"
+              type="checkbox"
+              value="on"
+            />
+            <label
+              class="bx--toggle__label"
+              for="toggle-24S-24N"
+            >
+              <span
+                class="bx--toggle__appearance"
+              />
+              24S-24N
+            </label>
+          </div>
+        </div>
+        <div
+          style="color: rgb(90, 91, 18);"
         >
           <div
             class="bx--form-item"
@@ -3771,7 +3723,7 @@ exports[`<MainFrame /> should render the svg element 1`] = `
           </div>
         </div>
         <div
-          style="color: rgb(196, 156, 148);"
+          style="color: rgb(65, 105, 32);"
         >
           <div
             class="bx--form-item"
@@ -3795,7 +3747,7 @@ exports[`<MainFrame /> should render the svg element 1`] = `
           </div>
         </div>
         <div
-          style="color: rgb(227, 119, 194);"
+          style="color: rgb(242, 93, 34);"
         >
           <div
             class="bx--form-item"
@@ -3819,7 +3771,7 @@ exports[`<MainFrame /> should render the svg element 1`] = `
           </div>
         </div>
         <div
-          style="color: rgb(247, 182, 210);"
+          style="color: rgb(62, 88, 122);"
         >
           <div
             class="bx--form-item"
@@ -3842,518 +3794,8 @@ exports[`<MainFrame /> should render the svg element 1`] = `
             </label>
           </div>
         </div>
-      </div>
-    </div>
-    <div
-      class="data-vis-footer"
-    >
-      <p
-        class="data-vis-footer-1"
-      >
-        GISTEMP Team, 2018: GISS Surface Temperature Analysis (GISTEMP). NASA Goddard Institute for Space Studies. Dataset accessed 2018-02-10 at https://data.giss.nasa.gov/gistemp/
-      </p>
-      <p
-        class="data-vis-footer-2"
-      >
-        Hansen, J., R. Ruedy, M. Sato, and K. Lo, 2010: Global surface temperature change, Rev. Geophys., 48, RG4004, doi:10.1029/2010RG000345
-      </p>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`<MainFrame /> should update when data change 1`] = `
-<div>
-  <div
-    class="data-vis-container"
-  >
-    <div
-      class="data-vis-header"
-    >
-      <p
-        class="data-vis-header-1"
-      >
-        Zonal Annual Mean Land-Ocean Temperature
-      </p>
-      <p
-        class="data-vis-header-2"
-      >
-        1880 - 2017
-      </p>
-    </div>
-    <div
-      class="data-vis-body"
-    >
-      <div
-        class="data-vis-chart"
-        tabindex="-1"
-      >
-        <svg
-          height="1000"
-          width="1000"
-        >
-          <g
-            transform="translate(40,20)"
-          >
-            <g
-              class="data-vis-axis-x"
-              fill="none"
-              font-family="sans-serif"
-              font-size="10"
-              text-anchor="middle"
-              transform="translate(0,960)"
-            >
-              <path
-                class="domain"
-                d="M0.5,6V0.5H920.5V6"
-                stroke="#000"
-              />
-              <g
-                class="tick"
-                opacity="1"
-                transform="translate(0.5,0)"
-              >
-                <line
-                  stroke="#000"
-                  y2="6"
-                />
-                <text
-                  dy="0.71em"
-                  fill="#000"
-                  y="9"
-                >
-                  1880
-                </text>
-              </g>
-              <g
-                class="tick"
-                opacity="1"
-                transform="translate(67.5,0)"
-              >
-                <line
-                  stroke="#000"
-                  y2="6"
-                />
-                <text
-                  dy="0.71em"
-                  fill="#000"
-                  y="9"
-                >
-                  1890
-                </text>
-              </g>
-              <g
-                class="tick"
-                opacity="1"
-                transform="translate(134.5,0)"
-              >
-                <line
-                  stroke="#000"
-                  y2="6"
-                />
-                <text
-                  dy="0.71em"
-                  fill="#000"
-                  y="9"
-                >
-                  1900
-                </text>
-              </g>
-              <g
-                class="tick"
-                opacity="1"
-                transform="translate(201.5,0)"
-              >
-                <line
-                  stroke="#000"
-                  y2="6"
-                />
-                <text
-                  dy="0.71em"
-                  fill="#000"
-                  y="9"
-                >
-                  1910
-                </text>
-              </g>
-              <g
-                class="tick"
-                opacity="1"
-                transform="translate(269.5,0)"
-              >
-                <line
-                  stroke="#000"
-                  y2="6"
-                />
-                <text
-                  dy="0.71em"
-                  fill="#000"
-                  y="9"
-                >
-                  1920
-                </text>
-              </g>
-              <g
-                class="tick"
-                opacity="1"
-                transform="translate(336.5,0)"
-              >
-                <line
-                  stroke="#000"
-                  y2="6"
-                />
-                <text
-                  dy="0.71em"
-                  fill="#000"
-                  y="9"
-                >
-                  1930
-                </text>
-              </g>
-              <g
-                class="tick"
-                opacity="1"
-                transform="translate(403.5,0)"
-              >
-                <line
-                  stroke="#000"
-                  y2="6"
-                />
-                <text
-                  dy="0.71em"
-                  fill="#000"
-                  y="9"
-                >
-                  1940
-                </text>
-              </g>
-              <g
-                class="tick"
-                opacity="1"
-                transform="translate(470.5,0)"
-              >
-                <line
-                  stroke="#000"
-                  y2="6"
-                />
-                <text
-                  dy="0.71em"
-                  fill="#000"
-                  y="9"
-                >
-                  1950
-                </text>
-              </g>
-              <g
-                class="tick"
-                opacity="1"
-                transform="translate(537.5,0)"
-              >
-                <line
-                  stroke="#000"
-                  y2="6"
-                />
-                <text
-                  dy="0.71em"
-                  fill="#000"
-                  y="9"
-                >
-                  1960
-                </text>
-              </g>
-              <g
-                class="tick"
-                opacity="1"
-                transform="translate(604.5,0)"
-              >
-                <line
-                  stroke="#000"
-                  y2="6"
-                />
-                <text
-                  dy="0.71em"
-                  fill="#000"
-                  y="9"
-                >
-                  1970
-                </text>
-              </g>
-              <g
-                class="tick"
-                opacity="1"
-                transform="translate(672.5,0)"
-              >
-                <line
-                  stroke="#000"
-                  y2="6"
-                />
-                <text
-                  dy="0.71em"
-                  fill="#000"
-                  y="9"
-                >
-                  1980
-                </text>
-              </g>
-              <g
-                class="tick"
-                opacity="1"
-                transform="translate(739.5,0)"
-              >
-                <line
-                  stroke="#000"
-                  y2="6"
-                />
-                <text
-                  dy="0.71em"
-                  fill="#000"
-                  y="9"
-                >
-                  1990
-                </text>
-              </g>
-              <g
-                class="tick"
-                opacity="1"
-                transform="translate(806.5,0)"
-              >
-                <line
-                  stroke="#000"
-                  y2="6"
-                />
-                <text
-                  dy="0.71em"
-                  fill="#000"
-                  y="9"
-                >
-                  2000
-                </text>
-              </g>
-              <g
-                class="tick"
-                opacity="1"
-                transform="translate(920.5,0)"
-              >
-                <line
-                  stroke="#000"
-                  y2="6"
-                />
-                <text
-                  dy="0.71em"
-                  fill="#000"
-                  y="9"
-                >
-                  2017
-                </text>
-              </g>
-            </g>
-            <g
-              class="data-vis-axis-y"
-              fill="none"
-              font-family="sans-serif"
-              font-size="10"
-              text-anchor="end"
-            >
-              <path
-                class="domain"
-                d="M940,960.5H0.5V0.5H940"
-                stroke="#000"
-              />
-              <g
-                class="tick "
-                opacity="1"
-                transform="translate(0,960.5)"
-              >
-                <line
-                  stroke="#000"
-                  x1="-20"
-                  x2="940"
-                />
-                <text
-                  dx="-3"
-                  dy="-3"
-                  fill="#000"
-                  x="-3"
-                >
-                  -1.5°
-                </text>
-              </g>
-              <g
-                class="tick "
-                opacity="1"
-                transform="translate(0,840.5)"
-              >
-                <line
-                  stroke="#000"
-                  x1="-20"
-                  x2="940"
-                />
-                <text
-                  dx="-3"
-                  dy="-3"
-                  fill="#000"
-                  x="-3"
-                >
-                  -1.0°
-                </text>
-              </g>
-              <g
-                class="tick "
-                opacity="1"
-                transform="translate(0,720.5)"
-              >
-                <line
-                  stroke="#000"
-                  x1="-20"
-                  x2="940"
-                />
-                <text
-                  dx="-3"
-                  dy="-3"
-                  fill="#000"
-                  x="-3"
-                >
-                  -0.5°
-                </text>
-              </g>
-              <g
-                class="tick data-vis-axis-y-zero"
-                opacity="1"
-                transform="translate(0,600.5)"
-              >
-                <line
-                  stroke="#000"
-                  x1="-20"
-                  x2="940"
-                />
-                <text
-                  dx="-3"
-                  dy="-3"
-                  fill="#000"
-                  x="-3"
-                >
-                  0
-                </text>
-              </g>
-              <g
-                class="tick "
-                opacity="1"
-                transform="translate(0,480.5)"
-              >
-                <line
-                  stroke="#000"
-                  x1="-20"
-                  x2="940"
-                />
-                <text
-                  dx="-3"
-                  dy="-3"
-                  fill="#000"
-                  x="-3"
-                >
-                  0.5°
-                </text>
-              </g>
-              <g
-                class="tick "
-                opacity="1"
-                transform="translate(0,360.5)"
-              >
-                <line
-                  stroke="#000"
-                  x1="-20"
-                  x2="940"
-                />
-                <text
-                  dx="-3"
-                  dy="-3"
-                  fill="#000"
-                  x="-3"
-                >
-                  1.0°
-                </text>
-              </g>
-              <g
-                class="tick "
-                opacity="1"
-                transform="translate(0,240.5)"
-              >
-                <line
-                  stroke="#000"
-                  x1="-20"
-                  x2="940"
-                />
-                <text
-                  dx="-3"
-                  dy="-3"
-                  fill="#000"
-                  x="-3"
-                >
-                  1.5°
-                </text>
-              </g>
-              <g
-                class="tick "
-                opacity="1"
-                transform="translate(0,120.5)"
-              >
-                <line
-                  stroke="#000"
-                  x1="-20"
-                  x2="940"
-                />
-                <text
-                  dx="-3"
-                  dy="-3"
-                  fill="#000"
-                  x="-3"
-                >
-                  2.0°
-                </text>
-              </g>
-              <g
-                class="tick "
-                opacity="1"
-                transform="translate(0,0.5)"
-              >
-                <line
-                  stroke="#000"
-                  x1="-20"
-                  x2="940"
-                />
-                <text
-                  dx="-3"
-                  dy="-3"
-                  fill="#000"
-                  x="-3"
-                >
-                  2.5°
-                </text>
-              </g>
-            </g>
-            <text
-              class="data-vis-info"
-              dy="-3"
-            >
-              Annual temperature change compared to the mean of the years from 1951 to 1980
-            </text>
-            <g
-              class="data-vis-group-line"
-            >
-              <path
-                class="data-vis-line"
-                d="M0,701L67,734L134,636L920,329"
-                style="stroke: #1f77b4;"
-              />
-            </g>
-          </g>
-        </svg>
-      </div>
-      <div
-        class="data-vis-tools"
-      >
         <div
-          style="color: rgb(31, 119, 180);"
+          style="color: rgb(124, 33, 62);"
         >
           <div
             class="bx--form-item"
@@ -4361,47 +3803,23 @@ exports[`<MainFrame /> should update when data change 1`] = `
             <input
               aria-label="Label Name"
               class="bx--toggle bx--toggle--small"
-              id="toggle-Glob"
+              id="toggle-90S-24S"
               type="checkbox"
               value="on"
             />
             <label
               class="bx--toggle__label"
-              for="toggle-Glob"
+              for="toggle-90S-24S"
             >
               <span
                 class="bx--toggle__appearance"
               />
-              Glob
+              90S-24S
             </label>
           </div>
         </div>
         <div
-          style="color: rgb(174, 199, 232);"
-        >
-          <div
-            class="bx--form-item"
-          >
-            <input
-              aria-label="Label Name"
-              class="bx--toggle bx--toggle--small"
-              id="toggle-NHem"
-              type="checkbox"
-              value="on"
-            />
-            <label
-              class="bx--toggle__label"
-              for="toggle-NHem"
-            >
-              <span
-                class="bx--toggle__appearance"
-              />
-              NHem
-            </label>
-          </div>
-        </div>
-        <div
-          style="color: rgb(255, 127, 14);"
+          style="color: rgb(49, 0, 53);"
         >
           <div
             class="bx--form-item"
@@ -4420,271 +3838,7 @@ exports[`<MainFrame /> should update when data change 1`] = `
               <span
                 class="bx--toggle__appearance"
               />
-              SHem
-            </label>
-          </div>
-        </div>
-        <div
-          style="color: rgb(255, 187, 120);"
-        >
-          <div
-            class="bx--form-item"
-          >
-            <input
-              aria-label="Label Name"
-              class="bx--toggle bx--toggle--small"
-              id="toggle-24N-90N"
-              type="checkbox"
-              value="on"
-            />
-            <label
-              class="bx--toggle__label"
-              for="toggle-24N-90N"
-            >
-              <span
-                class="bx--toggle__appearance"
-              />
-              24N-90N
-            </label>
-          </div>
-        </div>
-        <div
-          style="color: rgb(44, 160, 44);"
-        >
-          <div
-            class="bx--form-item"
-          >
-            <input
-              aria-label="Label Name"
-              class="bx--toggle bx--toggle--small"
-              id="toggle-24S-24N"
-              type="checkbox"
-              value="on"
-            />
-            <label
-              class="bx--toggle__label"
-              for="toggle-24S-24N"
-            >
-              <span
-                class="bx--toggle__appearance"
-              />
-              24S-24N
-            </label>
-          </div>
-        </div>
-        <div
-          style="color: rgb(152, 223, 138);"
-        >
-          <div
-            class="bx--form-item"
-          >
-            <input
-              aria-label="Label Name"
-              class="bx--toggle bx--toggle--small"
-              id="toggle-90S-24S"
-              type="checkbox"
-              value="on"
-            />
-            <label
-              class="bx--toggle__label"
-              for="toggle-90S-24S"
-            >
-              <span
-                class="bx--toggle__appearance"
-              />
-              90S-24S
-            </label>
-          </div>
-        </div>
-        <div
-          style="color: rgb(214, 39, 40);"
-        >
-          <div
-            class="bx--form-item"
-          >
-            <input
-              aria-label="Label Name"
-              class="bx--toggle bx--toggle--small"
-              id="toggle-64N-90N"
-              type="checkbox"
-              value="on"
-            />
-            <label
-              class="bx--toggle__label"
-              for="toggle-64N-90N"
-            >
-              <span
-                class="bx--toggle__appearance"
-              />
-              64N-90N
-            </label>
-          </div>
-        </div>
-        <div
-          style="color: rgb(255, 152, 150);"
-        >
-          <div
-            class="bx--form-item"
-          >
-            <input
-              aria-label="Label Name"
-              class="bx--toggle bx--toggle--small"
-              id="toggle-44N-64N"
-              type="checkbox"
-              value="on"
-            />
-            <label
-              class="bx--toggle__label"
-              for="toggle-44N-64N"
-            >
-              <span
-                class="bx--toggle__appearance"
-              />
-              44N-64N
-            </label>
-          </div>
-        </div>
-        <div
-          style="color: rgb(148, 103, 189);"
-        >
-          <div
-            class="bx--form-item"
-          >
-            <input
-              aria-label="Label Name"
-              class="bx--toggle bx--toggle--small"
-              id="toggle-24N-44N"
-              type="checkbox"
-              value="on"
-            />
-            <label
-              class="bx--toggle__label"
-              for="toggle-24N-44N"
-            >
-              <span
-                class="bx--toggle__appearance"
-              />
-              24N-44N
-            </label>
-          </div>
-        </div>
-        <div
-          style="color: rgb(197, 176, 213);"
-        >
-          <div
-            class="bx--form-item"
-          >
-            <input
-              aria-label="Label Name"
-              class="bx--toggle bx--toggle--small"
-              id="toggle-EQU-24N"
-              type="checkbox"
-              value="on"
-            />
-            <label
-              class="bx--toggle__label"
-              for="toggle-EQU-24N"
-            >
-              <span
-                class="bx--toggle__appearance"
-              />
-              EQU-24N
-            </label>
-          </div>
-        </div>
-        <div
-          style="color: rgb(140, 86, 75);"
-        >
-          <div
-            class="bx--form-item"
-          >
-            <input
-              aria-label="Label Name"
-              class="bx--toggle bx--toggle--small"
-              id="toggle-24S-EQU"
-              type="checkbox"
-              value="on"
-            />
-            <label
-              class="bx--toggle__label"
-              for="toggle-24S-EQU"
-            >
-              <span
-                class="bx--toggle__appearance"
-              />
-              24S-EQU
-            </label>
-          </div>
-        </div>
-        <div
-          style="color: rgb(196, 156, 148);"
-        >
-          <div
-            class="bx--form-item"
-          >
-            <input
-              aria-label="Label Name"
-              class="bx--toggle bx--toggle--small"
-              id="toggle-44S-24S"
-              type="checkbox"
-              value="on"
-            />
-            <label
-              class="bx--toggle__label"
-              for="toggle-44S-24S"
-            >
-              <span
-                class="bx--toggle__appearance"
-              />
-              44S-24S
-            </label>
-          </div>
-        </div>
-        <div
-          style="color: rgb(227, 119, 194);"
-        >
-          <div
-            class="bx--form-item"
-          >
-            <input
-              aria-label="Label Name"
-              class="bx--toggle bx--toggle--small"
-              id="toggle-64S-44S"
-              type="checkbox"
-              value="on"
-            />
-            <label
-              class="bx--toggle__label"
-              for="toggle-64S-44S"
-            >
-              <span
-                class="bx--toggle__appearance"
-              />
-              64S-44S
-            </label>
-          </div>
-        </div>
-        <div
-          style="color: rgb(247, 182, 210);"
-        >
-          <div
-            class="bx--form-item"
-          >
-            <input
-              aria-label="Label Name"
-              class="bx--toggle bx--toggle--small"
-              id="toggle-90S-64S"
-              type="checkbox"
-              value="on"
-            />
-            <label
-              class="bx--toggle__label"
-              for="toggle-90S-64S"
-            >
-              <span
-                class="bx--toggle__appearance"
-              />
-              90S-64S
+              South hemisphere
             </label>
           </div>
         </div>

@@ -2,7 +2,7 @@ import { mount } from 'enzyme';
 import * as React from 'react';
 import { Provider } from 'react-redux';
 import { createStore, Store } from 'redux';
-import { MainFrameState } from './reducers';
+import { MainFrameState, placeProperties } from './reducers';
 
 // tslint:disable-next-line no-var-requires
 const data = require('../../../../data/data.json');
@@ -17,7 +17,12 @@ import MainFrameContainer from './MainFrameContainer';
 
 describe('MainFrameContainer', () => {
 
-  const store: Store<MainFrameState> = createStore(() => ({ mainFrame: { data } }));
+  const initialState = {
+    data,
+    placeProperties
+  };
+
+  const store: Store<MainFrameState> = createStore(() => ({ mainFrame: initialState }));
 
   it('should render correctly', () => {
     const wrapper = mount(

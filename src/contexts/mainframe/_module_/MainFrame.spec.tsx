@@ -2,12 +2,16 @@ import { mount, shallow } from 'enzyme';
 import * as React from 'react';
 import MainFrame, { Props } from './MainFrame';
 import { transformData } from './MainFrameContainer';
+import { placeProperties } from './reducers';
 
 // tslint:disable-next-line no-var-requires
 const data = require('../../../../data/data.json');
 
 describe('<MainFrame />', () => {
-  const getInitialProps = (): Props => transformData([ data[ 0 ], data[ 10 ], data[ data.length - 1 ] ]);
+  const getInitialProps = (): Props => ({
+    ...transformData([ data[ 0 ], data[ 10 ], data[ data.length - 1 ] ], placeProperties),
+    placeProperties
+  });
 
   let root: HTMLDivElement = document.createElement('div');
 
@@ -55,18 +59,6 @@ describe('<MainFrame />', () => {
     root.querySelector('svg')!.getBoundingClientRect = () => ({ top: 0, right: 500, bottom: 500, left: 0, width: 500, height: 500 });
     window.dispatchEvent(new Event('resize'));
     wrapper.update();
-    jest.runAllTimers();
-
-    expect(root).toMatchSnapshot();
-  });
-
-  it('should update when data change', () => {
-
-    const props = { ...getInitialProps() };
-
-    const wrapper = mount<Props>(<MainFrame { ...props } />, { attachTo: root });
-
-    wrapper.setProps({ ...transformData([ data[ 0 ], data[ 10 ], data[ 20 ], data[ data.length - 1 ] ]) });
     jest.runAllTimers();
 
     expect(root).toMatchSnapshot();

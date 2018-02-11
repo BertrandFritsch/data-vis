@@ -1,7 +1,7 @@
 import * as React from 'react';
 import './MainFrame.scss';
 import * as d3 from 'd3';
-import { TemperatureByDate, TemperaturesByPlace, WorldPlace } from './reducers';
+import { PlaceProperties, TemperatureByDate, TemperaturesByPlace, WorldPlace } from './reducers';
 import { setInArray } from '../../../helpers';
 
 export interface Props {
@@ -10,6 +10,7 @@ export interface Props {
   maxValue: number;
   minDate: Date;
   maxDate: Date;
+  placeProperties: PlaceProperties;
 }
 
 interface State {
@@ -25,25 +26,14 @@ export default class MainFrame extends React.PureComponent<Props, State> {
   state: State;
   private chartState: ChartState = { update: () => undefined, resize: () => undefined };
 
-  private colorSelector: d3.ScaleOrdinal<string, string>;
-
   constructor(props: Props) {
     super(props);
-
-    this.colorSelector = d3.scaleOrdinal(d3.schemeCategory20)
-                           .domain(props.data.map(d => d.place));
 
     this.state = { selectedPlaces: props.data.find(d => d.place === 'Glob') ? [ 'Glob' ] : [] };
   }
 
   componentDidMount() {
     window.addEventListener('resize', this.windowResized);
-  }
-
-  componentWillReceiveProps(nextProps: Props) {
-    if (nextProps.data !== this.props.data) {
-      this.colorSelector.domain(nextProps.data.map(d => d.place));
-    }
   }
 
   componentDidUpdate() {
@@ -66,7 +56,7 @@ export default class MainFrame extends React.PureComponent<Props, State> {
           <div className='data-vis-tools'>
             {
               this.props.data.map(r =>
-                <div key={ r.place } style={ { color: this.colorSelector(r.place) } }>
+                <div key={ r.place } style={ { color: this.props.placeProperties [ r.place ].color } }>
                   <div className='bx--form-item'>
                     <input className='bx--toggle bx--toggle--small' id={ `toggle-${ r.place }` } type='checkbox'
                            aria-label='Label Name'
@@ -76,7 +66,7 @@ export default class MainFrame extends React.PureComponent<Props, State> {
                     <label className='bx--toggle__label' htmlFor={ `toggle-${ r.place }` }>
                       <span className='bx--toggle__appearance'>
                       </span>
-                      { r.place }
+                      { this.props.placeProperties [ r.place ].text }
                     </label>
                   </div>
                 </div>
@@ -196,7 +186,7 @@ export default class MainFrame extends React.PureComponent<Props, State> {
                        .attr('class', 'data-vis-group-line')
                        .call($g => $g.append<SVGPathElement>('path')
                                      .attr('class', 'data-vis-line')
-                                     .style('stroke', d => this.colorSelector(d.place))
+                                     .style('stroke', d => this.props.placeProperties [ d.place ].color)
                        )
                        .merge($chartLines)
                        .transition()
