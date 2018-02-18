@@ -1,7 +1,7 @@
 import { applyMiddleware, combineReducers, compose, createStore, Store as ReduxStore } from 'redux';
 import createSagaMiddleware from 'redux-saga';
 
-import mainFrameReducers, { MainFrameState } from './contexts/mainframe/_module_/reducers';
+import mainFrameReducers, { MainFrameState } from './contexts/data-vis2/_module_/reducers';
 
 const nodeProcess = typeof process !== 'undefined' && process;
 const isTestEnv = nodeProcess && nodeProcess.env.NODE_ENV === 'test';

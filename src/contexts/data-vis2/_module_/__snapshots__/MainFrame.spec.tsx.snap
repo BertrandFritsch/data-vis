@@ -1,0 +1,146 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<MainFrame /> should adapt when the window is resized 1`] = `
+<div>
+  <div
+    class="data-vis-container"
+  >
+    <div
+      class="data-vis-header"
+    >
+      <p
+        class="data-vis-header-1"
+      >
+        European Union Population
+      </p>
+      <p
+        class="data-vis-header-2"
+      >
+        2017
+      </p>
+    </div>
+    <div
+      class="data-vis-body"
+    >
+      <div
+        class="data-vis-chart"
+        tabindex="-1"
+      >
+        <svg
+          height="1000"
+          width="1000"
+        />
+      </div>
+    </div>
+    <div
+      class="data-vis-footer"
+    >
+      <p
+        class="data-vis-footer-1"
+      >
+        Source: https://ec.europa.eu/eurostat/
+      </p>
+      <p
+        class="data-vis-footer-2"
+      >
+        Copyright: https://ec.europa.eu/info/legal-notice_en
+      </p>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<MainFrame /> should render correctly 1`] = `
+<div
+  className="data-vis-container"
+>
+  <div
+    className="data-vis-header"
+  >
+    <p
+      className="data-vis-header-1"
+    >
+      European Union Population
+    </p>
+    <p
+      className="data-vis-header-2"
+    >
+      2017
+    </p>
+  </div>
+  <div
+    className="data-vis-body"
+  >
+    <div
+      className="data-vis-chart"
+      tabIndex={-1}
+    />
+  </div>
+  <div
+    className="data-vis-footer"
+  >
+    <p
+      className="data-vis-footer-1"
+    >
+      Source: https://ec.europa.eu/eurostat/
+    </p>
+    <p
+      className="data-vis-footer-2"
+    >
+      Copyright: https://ec.europa.eu/info/legal-notice_en
+    </p>
+  </div>
+</div>
+`;
+
+exports[`<MainFrame /> should render correctly 2`] = `""`;
+
+exports[`<MainFrame /> should render the svg element 1`] = `
+<div>
+  <div
+    class="data-vis-container"
+  >
+    <div
+      class="data-vis-header"
+    >
+      <p
+        class="data-vis-header-1"
+      >
+        European Union Population
+      </p>
+      <p
+        class="data-vis-header-2"
+      >
+        2017
+      </p>
+    </div>
+    <div
+      class="data-vis-body"
+    >
+      <div
+        class="data-vis-chart"
+        tabindex="-1"
+      >
+        <svg
+          height="1000"
+          width="1000"
+        />
+      </div>
+    </div>
+    <div
+      class="data-vis-footer"
+    >
+      <p
+        class="data-vis-footer-1"
+      >
+        Source: https://ec.europa.eu/eurostat/
+      </p>
+      <p
+        class="data-vis-footer-2"
+      >
+        Copyright: https://ec.europa.eu/info/legal-notice_en
+      </p>
+    </div>
+  </div>
+</div>
+`;

@@ -1,0 +1,120 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`mainFrame reducer should initialize the state with the initial state 1`] = `
+Object {
+  "data": Array [
+    Object {
+      "geo": "Austria",
+      "population": 8772865,
+    },
+    Object {
+      "geo": "Belgium",
+      "population": 11365834,
+    },
+    Object {
+      "geo": "Bulgaria",
+      "population": 7101859,
+    },
+    Object {
+      "geo": "Croatia",
+      "population": 4154213,
+    },
+    Object {
+      "geo": "Cyprus",
+      "population": 854802,
+    },
+    Object {
+      "geo": "Czech Republic",
+      "population": 10578820,
+    },
+    Object {
+      "geo": "Denmark",
+      "population": 5748769,
+    },
+    Object {
+      "geo": "Estonia",
+      "population": 1315635,
+    },
+    Object {
+      "geo": "Finland",
+      "population": 5503297,
+    },
+    Object {
+      "geo": "France",
+      "population": 67024459,
+    },
+    Object {
+      "geo": "Germany",
+      "population": 82800000,
+    },
+    Object {
+      "geo": "Greece",
+      "population": 10757293,
+    },
+    Object {
+      "geo": "Hungary",
+      "population": 9797561,
+    },
+    Object {
+      "geo": "Ireland",
+      "population": 4774833,
+    },
+    Object {
+      "geo": "Italy",
+      "population": 60589445,
+    },
+    Object {
+      "geo": "Latvia",
+      "population": 1950116,
+    },
+    Object {
+      "geo": "Lithuania",
+      "population": 2847904,
+    },
+    Object {
+      "geo": "Luxembourg",
+      "population": 590667,
+    },
+    Object {
+      "geo": "Malta",
+      "population": 440433,
+    },
+    Object {
+      "geo": "Netherlands",
+      "population": 17081507,
+    },
+    Object {
+      "geo": "Poland",
+      "population": 37972964,
+    },
+    Object {
+      "geo": "Portugal",
+      "population": 10309573,
+    },
+    Object {
+      "geo": "Romania",
+      "population": 19638309,
+    },
+    Object {
+      "geo": "Slovakia",
+      "population": 5435343,
+    },
+    Object {
+      "geo": "Slovenia",
+      "population": 2065895,
+    },
+    Object {
+      "geo": "Spain",
+      "population": 46528966,
+    },
+    Object {
+      "geo": "Sweden",
+      "population": 9995153,
+    },
+    Object {
+      "geo": "United Kingdom",
+      "population": 65808573,
+    },
+  ],
+}
+`;

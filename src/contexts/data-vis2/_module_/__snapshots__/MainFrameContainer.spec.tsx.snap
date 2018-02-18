@@ -1,0 +1,280 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MainFrameContainer should render correctly 1`] = `
+<Provider
+  store={
+    Object {
+      "dispatch": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+      Symbol(observable): [Function],
+    }
+  }
+>
+  <Connect(MainFrame)>
+    <MainFrame
+      data={
+        Array [
+          Object {
+            "geo": "Austria",
+            "population": 8772865,
+          },
+          Object {
+            "geo": "Belgium",
+            "population": 11365834,
+          },
+          Object {
+            "geo": "Bulgaria",
+            "population": 7101859,
+          },
+          Object {
+            "geo": "Croatia",
+            "population": 4154213,
+          },
+          Object {
+            "geo": "Cyprus",
+            "population": 854802,
+          },
+          Object {
+            "geo": "Czech Republic",
+            "population": 10578820,
+          },
+          Object {
+            "geo": "Denmark",
+            "population": 5748769,
+          },
+          Object {
+            "geo": "Estonia",
+            "population": 1315635,
+          },
+          Object {
+            "geo": "Finland",
+            "population": 5503297,
+          },
+          Object {
+            "geo": "France",
+            "population": 67024459,
+          },
+          Object {
+            "geo": "Germany",
+            "population": 82800000,
+          },
+          Object {
+            "geo": "Greece",
+            "population": 10757293,
+          },
+          Object {
+            "geo": "Hungary",
+            "population": 9797561,
+          },
+          Object {
+            "geo": "Ireland",
+            "population": 4774833,
+          },
+          Object {
+            "geo": "Italy",
+            "population": 60589445,
+          },
+          Object {
+            "geo": "Latvia",
+            "population": 1950116,
+          },
+          Object {
+            "geo": "Lithuania",
+            "population": 2847904,
+          },
+          Object {
+            "geo": "Luxembourg",
+            "population": 590667,
+          },
+          Object {
+            "geo": "Malta",
+            "population": 440433,
+          },
+          Object {
+            "geo": "Netherlands",
+            "population": 17081507,
+          },
+          Object {
+            "geo": "Poland",
+            "population": 37972964,
+          },
+          Object {
+            "geo": "Portugal",
+            "population": 10309573,
+          },
+          Object {
+            "geo": "Romania",
+            "population": 19638309,
+          },
+          Object {
+            "geo": "Slovakia",
+            "population": 5435343,
+          },
+          Object {
+            "geo": "Slovenia",
+            "population": 2065895,
+          },
+          Object {
+            "geo": "Spain",
+            "population": 46528966,
+          },
+          Object {
+            "geo": "Sweden",
+            "population": 9995153,
+          },
+          Object {
+            "geo": "United Kingdom",
+            "population": 65808573,
+          },
+        ]
+      }
+      dispatch={[Function]}
+    >
+      <div>
+        <p
+          key="0"
+        >
+          0
+        </p>
+        <p
+          key="1"
+        >
+          1
+        </p>
+        <p
+          key="2"
+        >
+          2
+        </p>
+        <p
+          key="3"
+        >
+          3
+        </p>
+        <p
+          key="4"
+        >
+          4
+        </p>
+        <p
+          key="5"
+        >
+          5
+        </p>
+        <p
+          key="6"
+        >
+          6
+        </p>
+        <p
+          key="7"
+        >
+          7
+        </p>
+        <p
+          key="8"
+        >
+          8
+        </p>
+        <p
+          key="9"
+        >
+          9
+        </p>
+        <p
+          key="10"
+        >
+          10
+        </p>
+        <p
+          key="11"
+        >
+          11
+        </p>
+        <p
+          key="12"
+        >
+          12
+        </p>
+        <p
+          key="13"
+        >
+          13
+        </p>
+        <p
+          key="14"
+        >
+          14
+        </p>
+        <p
+          key="15"
+        >
+          15
+        </p>
+        <p
+          key="16"
+        >
+          16
+        </p>
+        <p
+          key="17"
+        >
+          17
+        </p>
+        <p
+          key="18"
+        >
+          18
+        </p>
+        <p
+          key="19"
+        >
+          19
+        </p>
+        <p
+          key="20"
+        >
+          20
+        </p>
+        <p
+          key="21"
+        >
+          21
+        </p>
+        <p
+          key="22"
+        >
+          22
+        </p>
+        <p
+          key="23"
+        >
+          23
+        </p>
+        <p
+          key="24"
+        >
+          24
+        </p>
+        <p
+          key="25"
+        >
+          25
+        </p>
+        <p
+          key="26"
+        >
+          26
+        </p>
+        <p
+          key="27"
+        >
+          27
+        </p>
+      </div>
+    </MainFrame>
+  </Connect(MainFrame)>
+</Provider>
+`;
