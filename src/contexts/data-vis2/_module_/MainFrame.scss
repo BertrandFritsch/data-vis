@@ -26,8 +26,8 @@
   .data-vis-body {
     flex: 1;
     display: flex;
-    height: 500px;
-    width: 500px;
+    min-height: 500px;
+    min-width: 500px;
     align-self: center;
 
     .data-vis-chart {
