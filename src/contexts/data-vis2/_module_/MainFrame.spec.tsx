@@ -1,18 +1,17 @@
 import { mount, shallow } from 'enzyme';
 import * as React from 'react';
 import MainFrame, { Props } from './MainFrame';
+import { transformData } from './MainFrameContainer';
 
 // tslint:disable-next-line no-var-requires
 const data = require('../../../../data/data2.json');
 
 describe('<MainFrame />', () => {
   const getInitialProps = (): Props => ({
-    data
+    data: transformData(data)
   });
 
   let root: HTMLDivElement = document.createElement('div');
-
-  jest.useFakeTimers();
 
   beforeEach(() => {
     root = document.createElement('div');
@@ -20,7 +19,6 @@ describe('<MainFrame />', () => {
   });
 
   afterEach(() => {
-    jest.runAllTimers();
     root.parentNode!.removeChild(root);
   });
 
@@ -42,21 +40,20 @@ describe('<MainFrame />', () => {
     const props = { ...getInitialProps() };
 
     mount<Props>(<MainFrame { ...props } />, { attachTo: root });
-    jest.runAllTimers();
 
     expect(root).toMatchSnapshot();
   });
 
-  it('should adapt when the window is resized', () => {
+  it('should display the tooltip', () => {
 
     const props = { ...getInitialProps() };
 
-    const wrapper = mount<Props>(<MainFrame { ...props } />, { attachTo: root });
+    mount<Props>(<MainFrame { ...props } />, { attachTo: root });
+    root.querySelector('circle')!.dispatchEvent(new MouseEvent('mousemove'));
 
-    root.querySelector('svg')!.getBoundingClientRect = () => ({ top: 0, right: 500, bottom: 500, left: 0, width: 500, height: 500 });
-    window.dispatchEvent(new Event('resize'));
-    wrapper.update();
-    jest.runAllTimers();
+    expect(root).toMatchSnapshot();
+
+    root.querySelector('circle')!.dispatchEvent(new MouseEvent('mouseout'));
 
     expect(root).toMatchSnapshot();
   });

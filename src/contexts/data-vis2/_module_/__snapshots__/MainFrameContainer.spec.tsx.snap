@@ -19,114 +19,142 @@ exports[`MainFrameContainer should render correctly 1`] = `
           Object {
             "geo": "Austria",
             "population": 8772865,
+            "relativePopulation": 0.10117139153973453,
           },
           Object {
             "geo": "Belgium",
             "population": 11365834,
+            "relativePopulation": 0.13265491063108673,
           },
           Object {
             "geo": "Bulgaria",
             "population": 7101859,
+            "relativePopulation": 0.08088223678980731,
           },
           Object {
             "geo": "Croatia",
             "population": 4154213,
+            "relativePopulation": 0.045092272036835745,
           },
           Object {
             "geo": "Cyprus",
             "population": 854802,
+            "relativePopulation": 0.00503121877753437,
           },
           Object {
             "geo": "Czech Republic",
             "population": 10578820,
+            "relativePopulation": 0.12309908088759136,
           },
           Object {
             "geo": "Denmark",
             "population": 5748769,
+            "relativePopulation": 0.06445318004160949,
           },
           Object {
             "geo": "Estonia",
             "population": 1315635,
+            "relativePopulation": 0.010626597879029646,
           },
           Object {
             "geo": "Finland",
             "population": 5503297,
+            "relativePopulation": 0.06147268841274991,
           },
           Object {
             "geo": "France",
             "population": 67024459,
+            "relativePopulation": 0.8084552702905784,
           },
           Object {
             "geo": "Germany",
             "population": 82800000,
+            "relativePopulation": 1,
           },
           Object {
             "geo": "Greece",
             "population": 10757293,
+            "relativePopulation": 0.12526607868154527,
           },
           Object {
             "geo": "Hungary",
             "population": 9797561,
+            "relativePopulation": 0.11361312766493782,
           },
           Object {
             "geo": "Ireland",
             "population": 4774833,
+            "relativePopulation": 0.052627765757923425,
           },
           Object {
             "geo": "Italy",
             "population": 60589445,
+            "relativePopulation": 0.7303221008920554,
           },
           Object {
             "geo": "Latvia",
             "population": 1950116,
+            "relativePopulation": 0.018330390202270005,
           },
           Object {
             "geo": "Lithuania",
             "population": 2847904,
+            "relativePopulation": 0.029231224588638256,
           },
           Object {
             "geo": "Luxembourg",
             "population": 590667,
+            "relativePopulation": 0.0018241232375590319,
           },
           Object {
             "geo": "Malta",
             "population": 440433,
+            "relativePopulation": 0,
           },
           Object {
             "geo": "Netherlands",
             "population": 17081507,
+            "relativePopulation": 0.20205392774830883,
           },
           Object {
             "geo": "Poland",
             "population": 37972964,
+            "relativePopulation": 0.4557154969015318,
           },
           Object {
             "geo": "Portugal",
             "population": 10309573,
+            "relativePopulation": 0.11982991605577528,
           },
           Object {
             "geo": "Romania",
             "population": 19638309,
+            "relativePopulation": 0.2330983114566399,
           },
           Object {
             "geo": "Slovakia",
             "population": 5435343,
+            "relativePopulation": 0.06064759908220498,
           },
           Object {
             "geo": "Slovenia",
             "population": 2065895,
+            "relativePopulation": 0.019736164955796817,
           },
           Object {
             "geo": "Spain",
             "population": 46528966,
+            "relativePopulation": 0.5596014486088787,
           },
           Object {
             "geo": "Sweden",
             "population": 9995153,
+            "relativePopulation": 0.11601226606740174,
           },
           Object {
             "geo": "United Kingdom",
             "population": 65808573,
+            "relativePopulation": 0.7936921280802751,
           },
         ]
       }
@@ -136,142 +164,142 @@ exports[`MainFrameContainer should render correctly 1`] = `
         <p
           key="0"
         >
-          0
+          Austria
         </p>
         <p
           key="1"
         >
-          1
+          Belgium
         </p>
         <p
           key="2"
         >
-          2
+          Bulgaria
         </p>
         <p
           key="3"
         >
-          3
+          Croatia
         </p>
         <p
           key="4"
         >
-          4
+          Cyprus
         </p>
         <p
           key="5"
         >
-          5
+          Czech Republic
         </p>
         <p
           key="6"
         >
-          6
+          Denmark
         </p>
         <p
           key="7"
         >
-          7
+          Estonia
         </p>
         <p
           key="8"
         >
-          8
+          Finland
         </p>
         <p
           key="9"
         >
-          9
+          France
         </p>
         <p
           key="10"
         >
-          10
+          Germany
         </p>
         <p
           key="11"
         >
-          11
+          Greece
         </p>
         <p
           key="12"
         >
-          12
+          Hungary
         </p>
         <p
           key="13"
         >
-          13
+          Ireland
         </p>
         <p
           key="14"
         >
-          14
+          Italy
         </p>
         <p
           key="15"
         >
-          15
+          Latvia
         </p>
         <p
           key="16"
         >
-          16
+          Lithuania
         </p>
         <p
           key="17"
         >
-          17
+          Luxembourg
         </p>
         <p
           key="18"
         >
-          18
+          Malta
         </p>
         <p
           key="19"
         >
-          19
+          Netherlands
         </p>
         <p
           key="20"
         >
-          20
+          Poland
         </p>
         <p
           key="21"
         >
-          21
+          Portugal
         </p>
         <p
           key="22"
         >
-          22
+          Romania
         </p>
         <p
           key="23"
         >
-          23
+          Slovakia
         </p>
         <p
           key="24"
         >
-          24
+          Slovenia
         </p>
         <p
           key="25"
         >
-          25
+          Spain
         </p>
         <p
           key="26"
         >
-          26
+          Sweden
         </p>
         <p
           key="27"
         >
-          27
+          United Kingdom
         </p>
       </div>
     </MainFrame>

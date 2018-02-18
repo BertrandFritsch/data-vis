@@ -1,30 +1,41 @@
 import * as React from 'react';
 import './MainFrame.scss';
 import * as d3 from 'd3';
-import { RawRecord } from './reducers';
+import { Record } from './reducers';
 
 export interface Props {
-  data: RawRecord[];
+  data: Record[];
+}
+
+interface Node {
+  data: Record;
+  x: number;
+  y: number;
+}
+
+interface State {
+  nodes: Node[];
 }
 
 interface ChartState {
   update: () => void;
-  resize: () => void;
 }
 
-export default class MainFrame extends React.PureComponent<Props> {
-  private chartState: ChartState = { update: () => undefined, resize: () => undefined };
+export default class MainFrame extends React.PureComponent<Props, State> {
+  state: State;
 
-  componentDidMount() {
-    window.addEventListener('resize', this.windowResized);
-  }
+  private chartState: ChartState = { update: () => undefined };
 
-  componentDidUpdate() {
-    this.chartState.update();
-  }
+  constructor(props: Props) {
+    super(props);
 
-  componentWillUnmount() {
-    window.removeEventListener('resize', this.windowResized);
+    this.state = {
+      nodes: props.data.map(d => ({
+        data: d,
+        x: 50,
+        y: 50
+      }))
+    };
   }
 
   render() {
@@ -45,33 +56,80 @@ export default class MainFrame extends React.PureComponent<Props> {
     );
   }
 
-  private windowResized = () => this.chartState.resize();
-
   private renderChart = (elem: HTMLElement | null) => {
     if (elem !== null) {
       this.chartState = (() => {
 
-        let clientRect = elem.getBoundingClientRect();
-        const margin = { top: 20, right: 40, bottom: 20, left: 40 };
+        const clientRect = elem.getBoundingClientRect();
+
+        const scale = d3.scaleLinear()
+                        .domain([ 0, 1 ])
+                        .range([ 1, 20 ]);
 
         const $svg = d3.select(elem)
                        .append<SVGSVGElement>('svg')
                        .attr('width', clientRect.width)
-                       .attr('height', clientRect.height);
+                       .attr('height', clientRect.height)
+                       .attr('viewBox', '0, 0, 100, 100');
 
+        const $tooltipDiv = d3.select(elem)
+                              .append('div')
+                              .attr('class', 'data-vis-tooltip');
+
+        $tooltipDiv.append('div');
+
+        const $overallGroup = $svg.append<SVGGElement>('g');
+        const $circlesData = $overallGroup.selectAll<SVGGElement, Node>('.data-vis-circle')
+                                          .data(this.state.nodes, d => d.data.geo);
+
+        const populationFormat = d3.format(',.3r');
+
+        const $circleGroups = $circlesData.enter()
+                                          .append<SVGGElement>('g')
+                                          .attr('class', 'data-vis-group-circle')
+                                          .each((d, i, g) => {
+                                            const $g = d3.select(g [ i ]);
+                                            const $circle = $g.append('circle')
+                                                              .attr('r', scale(d.data.relativePopulation))
+                                                              .on('mousemove', () => {
+                                                                $tooltipDiv.classed('data-vis-tooltip--hover', true)
+                                                                           .style('left', d3.event.pageX + 4 + 'px')
+                                                                           .style('top', d3.event.pageY + 4 + 'px')
+                                                                           .select('div')
+                                                                           .html(`<span>${ d.data.geo }</span><br /><span>${ populationFormat(d.data.population)}</span>`);
+                                                              })
+                                                              .on('mouseout', () => {
+                                                                $tooltipDiv.classed('data-vis-tooltip--hover', false);
+                                                              });
+
+                                            if (d.data.relativePopulation > .4) {
+                                              $g.append('text')
+                                                .text(d.data.geo);
+                                            }
+                                            else {
+                                              $circle.append('title')
+                                                     .text(d.data.geo);
+                                            }
+                                          })
+                                          .merge($circlesData);
+
+        d3.forceSimulation(this.state.nodes)
+          .force('collide', d3.forceCollide<Node>().radius(d => scale(d.data.relativePopulation * 1.05)).strength(.75))
+          .force('x', d3.forceX(50))
+          .force('y', d3.forceY(50))
+          .on('tick', () => {
+            $circleGroups.each(
+              (d, i, g) => {
+                d.x = Math.min(Math.max(scale(d.data.relativePopulation), d.x), 100 - scale(d.data.relativePopulation));
+                d.y = Math.min(Math.max(scale(d.data.relativePopulation), d.y), 100 - scale(d.data.relativePopulation));
+                d3.select(g[ i ])
+                  .attr('transform', `translate(${ d.x },${ d.y })`);
+              }
+            );
+          });
         return {
           update: () => {
-
-            const width = clientRect.width - margin.left - margin.right;
-            const height = clientRect.height - margin.top - margin.bottom;
-
-            $svg.attr('width', clientRect.width)
-                .attr('height', clientRect.height);
-          },
-
-          resize: () => {
-            clientRect = elem.getBoundingClientRect();
-            this.chartState.update();
+            // nothing to update
           }
         };
       })();

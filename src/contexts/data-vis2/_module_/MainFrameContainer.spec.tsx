@@ -8,7 +8,7 @@ import { MainFrameState } from './reducers';
 const data = require('../../../../data/data2.json');
 
 const MainFrame = (props: MainFrameProps) =>
-  <div>{ Object.keys(props.data).map((n, i) => <p key={ i }>{ n }</p>) }</div>;
+  <div>{ props.data.map((n, i) => <p key={ i }>{ n.geo }</p>) }</div>;
 
 jest.mock('./MainFrame', () => ({ default: MainFrame }));
 

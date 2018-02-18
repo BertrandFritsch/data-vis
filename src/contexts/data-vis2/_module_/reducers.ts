@@ -8,6 +8,10 @@ export interface RawRecord {
   population: number;
 }
 
+export interface Record extends RawRecord {
+  relativePopulation: number;
+}
+
 export interface State {
   data: RawRecord[];
 }
