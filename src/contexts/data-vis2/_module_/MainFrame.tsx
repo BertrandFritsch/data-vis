@@ -114,7 +114,7 @@ export default class MainFrame extends React.PureComponent<Props, State> {
                                           .merge($circlesData);
 
         d3.forceSimulation(this.state.nodes)
-          .force('collide', d3.forceCollide<Node>().radius(d => scale(d.data.relativePopulation * 1.05)).strength(.75))
+          .force('collide', d3.forceCollide<Node>().radius(d => scale(d.data.relativePopulation) + 1).strength(.75))
           .force('x', d3.forceX(50))
           .force('y', d3.forceY(50))
           .on('tick', () => {
