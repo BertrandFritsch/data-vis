@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Provider } from 'react-redux';
 
-import mainframe from './contexts/data-vis2';
+import mainframe from './contexts/data-vis1';
 
 import { Store } from './createStore';
 

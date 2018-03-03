@@ -14,7 +14,7 @@
   ],
   "scripts": {
     "vars": "env | grep npm_package_",
-    "build": "NODE_ENV=production PUBLIC_PATH=/coursera-data-vis2 webpack -p",
+    "build": "NODE_ENV=production PUBLIC_PATH=/annual-temperature-change webpack -p",
     "build:watch": "NODE_ENV=development webpack-dev-server -d --progress",
     "lint": "tslint -c tslint.json 'src/**/*.{ts,tsx}'",
     "test:unit:watch": "NODE_ENV=test jest --watch",

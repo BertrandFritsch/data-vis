@@ -2414,12 +2414,12 @@ Object {
     "NHem": Object {
       "color": "#0391f9",
       "order": 1,
-      "text": "North hemisphere",
+      "text": "Northern hemisphere",
     },
     "SHem": Object {
       "color": "#310035",
       "order": 13,
-      "text": "South hemisphere",
+      "text": "Southern hemisphere",
     },
   },
 }

@@ -15,6 +15,7 @@ export interface Props {
 
 interface State {
   selectedPlaces: WorldPlace[];
+  placeOver: WorldPlace | null;
 }
 
 interface ChartState {
@@ -29,7 +30,7 @@ export default class MainFrame extends React.PureComponent<Props, State> {
   constructor(props: Props) {
     super(props);
 
-    this.state = { selectedPlaces: props.data.find(d => d.place === 'Glob') ? [ 'Glob' ] : [] };
+    this.state = { selectedPlaces: props.data.find(d => d.place === 'Glob') ? [ 'Glob' ] : [], placeOver: null };
   }
 
   componentDidMount() {
@@ -49,24 +50,30 @@ export default class MainFrame extends React.PureComponent<Props, State> {
       <div className='data-vis-container'>
         <div className='data-vis-header'>
           <p className='data-vis-header-1'>Zonal Annual Mean Land-Ocean Temperature</p>
-          <p className='data-vis-header-2'>{ `${ this.props.minDate.getFullYear() } - ${ this.props.maxDate.getFullYear() }` }</p>
+          <p
+            className='data-vis-header-2'>{ `${ this.props.minDate.getFullYear() } - ${ this.props.maxDate.getFullYear() }` }</p>
         </div>
         <div className='data-vis-body'>
           <div className='data-vis-chart' tabIndex={ -1 } ref={ this.renderChart } />
           <div className='data-vis-tools'>
             {
               this.props.data.map(r =>
-                <div key={ r.place } style={ { color: this.props.placeProperties [ r.place ].color } }>
+                <div key={ r.place } style={ { color: this.props.placeProperties [ r.place ].color } }
+                     className={ `${ r.place === this.state.placeOver ? 'data-vis-container-place-over' : '' }` }
+                >
                   <div className='bx--form-item'>
                     <input className='bx--toggle bx--toggle--small' id={ `toggle-${ r.place }` } type='checkbox'
                            aria-label='Label Name'
                            checked={ this.state.selectedPlaces.find(d => d === r.place) !== undefined }
                            onChange={ e => this.togglePlace(r.place, e.target.checked) }
                     />
-                    <label className='bx--toggle__label' htmlFor={ `toggle-${ r.place }` }>
+                    <label className='bx--toggle__label' htmlFor={ `toggle-${ r.place }` }
+                           onMouseEnter={ () => this.setState({ placeOver: r.place }) }
+                           onMouseLeave={ () => this.setState({ placeOver: null }) }
+                    >
                       <span className='bx--toggle__appearance'>
                       </span>
-                      { this.props.placeProperties [ r.place ].text }
+                      { this.props.placeProperties[ r.place ].text }
                     </label>
                   </div>
                 </div>
@@ -176,7 +183,7 @@ export default class MainFrame extends React.PureComponent<Props, State> {
                   });
 
             const $chartLines = $gRoot.selectAll<SVGGElement, TemperaturesByPlace>('.data-vis-group-line')
-                                      .data(this.props.data.filter(d => this.state.selectedPlaces.find(p => p === d.place) !== undefined), d => d.place);
+                                      .data(this.props.data.filter(d => this.state.placeOver === d.place || this.state.selectedPlaces.find(p => p === d.place) !== undefined), d => d.place);
 
             $chartLines.exit()
                        .remove();
@@ -189,8 +196,8 @@ export default class MainFrame extends React.PureComponent<Props, State> {
                                      .style('stroke', d => this.props.placeProperties [ d.place ].color)
                        )
                        .merge($chartLines)
-                       .transition()
                        .call($g => $g.select('.data-vis-line')
+                                     .classed('data-vis-line-over', d => this.state.placeOver === d.place)
                                      .attr('d', d => line(d.values))
                        );
           },

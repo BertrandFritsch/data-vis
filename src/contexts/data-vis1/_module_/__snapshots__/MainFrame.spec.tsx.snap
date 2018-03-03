@@ -534,7 +534,7 @@ exports[`<MainFrame /> should adapt when the window is resized 1`] = `
               <span
                 class="bx--toggle__appearance"
               />
-              North hemisphere
+              Northern hemisphere
             </label>
           </div>
         </div>
@@ -822,7 +822,7 @@ exports[`<MainFrame /> should adapt when the window is resized 1`] = `
               <span
                 class="bx--toggle__appearance"
               />
-              South hemisphere
+              Southern hemisphere
             </label>
           </div>
         </div>
@@ -1389,7 +1389,7 @@ exports[`<MainFrame /> should add a line when toggling a zone selector 1`] = `
               <span
                 class="bx--toggle__appearance"
               />
-              North hemisphere
+              Northern hemisphere
             </label>
           </div>
         </div>
@@ -1677,7 +1677,7 @@ exports[`<MainFrame /> should add a line when toggling a zone selector 1`] = `
               <span
                 class="bx--toggle__appearance"
               />
-              South hemisphere
+              Southern hemisphere
             </label>
           </div>
         </div>
@@ -2235,7 +2235,7 @@ exports[`<MainFrame /> should add a line when toggling a zone selector 2`] = `
               <span
                 class="bx--toggle__appearance"
               />
-              North hemisphere
+              Northern hemisphere
             </label>
           </div>
         </div>
@@ -2523,7 +2523,7 @@ exports[`<MainFrame /> should add a line when toggling a zone selector 2`] = `
               <span
                 class="bx--toggle__appearance"
               />
-              South hemisphere
+              Southern hemisphere
             </label>
           </div>
         </div>
@@ -2631,7 +2631,7 @@ exports[`<MainFrame /> should render correctly 1`] = `
             <span
               className="bx--toggle__appearance"
             />
-            North hemisphere
+            Northern hemisphere
           </label>
         </div>
       </div>
@@ -2991,7 +2991,7 @@ exports[`<MainFrame /> should render correctly 1`] = `
             <span
               className="bx--toggle__appearance"
             />
-            South hemisphere
+            Southern hemisphere
           </label>
         </div>
       </div>
@@ -3550,7 +3550,7 @@ exports[`<MainFrame /> should render the svg element 1`] = `
               <span
                 class="bx--toggle__appearance"
               />
-              North hemisphere
+              Northern hemisphere
             </label>
           </div>
         </div>
@@ -3838,7 +3838,7 @@ exports[`<MainFrame /> should render the svg element 1`] = `
               <span
                 class="bx--toggle__appearance"
               />
-              South hemisphere
+              Southern hemisphere
             </label>
           </div>
         </div>

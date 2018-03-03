@@ -29,7 +29,7 @@ export type PlaceProperties = {
 
 export const placeProperties: PlaceProperties = {
   'Glob':    { order: 0, color: '#ff0000', text: 'Global' },
-  'NHem':    { order: 1, color: '#0391f9', text: 'North hemisphere' },
+  'NHem':    { order: 1, color: '#0391f9', text: 'Northern hemisphere' },
   '24N-90N': { order: 2, color: '#5b924e', text: '24N-90N' },
   '64N-90N': { order: 3, color: '#fc9127', text: '64N-90N' },
   '44N-64N': { order: 4, color: '#ab5fab', text: '44N-64N' },
@@ -41,7 +41,7 @@ export const placeProperties: PlaceProperties = {
   '64S-44S': { order: 10, color: '#f25d22', text: '64S-44S' },
   '90S-64S': { order: 11, color: '#3e587a', text: '90S-64S' },
   '90S-24S': { order: 12, color: '#7c213e', text: '90S-24S' },
-  'SHem':    { order: 13, color: '#310035', text: 'South hemisphere' }
+  'SHem':    { order: 13, color: '#310035', text: 'Southern hemisphere' }
 };
 
 export type RawRecord = {

@@ -165,7 +165,7 @@ config = {
             options: {
               hash: 'sha512',
               digest: 'hex',
-              publicPath: `${publicPath}assets/`,
+              publicPath: path.join(publicPath, 'assets/'),
               outputPath: 'assets/',
               name: '[name]-[hash].[ext]'
             }
