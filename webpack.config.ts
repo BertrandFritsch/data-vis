@@ -2,12 +2,14 @@ import * as HtmlWebpackPlugin from 'html-webpack-plugin';
 import * as path from 'path';
 import * as webpack from 'webpack';
 import * as WebpackNotifierPlugin from 'webpack-notifier';
+import * as ExtractTextPlugin from 'extract-text-webpack-plugin';
 import * as ForkTsCheckerWebpackPlugin from 'fork-ts-checker-webpack-plugin';
 
 const productionEnv = process.env.NODE_ENV === 'production';
 const developmentEnv = !productionEnv;
-const title = 'data-vis';
-const publicPath = process.env.PUBLIC_PATH || '';
+const title = 'Zonal Annual Mean Land-Ocean Temperature';
+const publicPath = process.env.PUBLIC_PATH || '/';
+const useCssSourceMap = false; // not yet ready to avoid the "Flash of Unstyled Content" effect
 
 let config: webpack.Configuration = {};
 
@@ -17,8 +19,8 @@ config.plugins = [
     template: 'index.html',
     inject: 'body',
     filename: 'index.html',
-    title,
-  }),
+    title
+  })
 ];
 
 if (developmentEnv) {
@@ -43,11 +45,6 @@ if (developmentEnv) {
       )
     ],
 
-    entry: [
-      // activate HMR for React
-      'react-hot-loader/patch',
-    ],
-
     devServer: {
       hot: true,
       historyApiFallback: {
@@ -57,43 +54,65 @@ if (developmentEnv) {
             from: '/assets/.+$',
             to: (context: { parsedUrl: { pathname: string } }) => `./nginx${ context.parsedUrl.pathname }`
           }
-        ],
-      },
+        ]
+      }
     },
 
-    devtool: 'cheap-module-source-map',
+    devtool: 'cheap-module-eval-source-map'
+  };
+}
+else {
+  config = {
+    ...config,
+    plugins: [
+      ...config.plugins,
+      new ExtractTextPlugin({
+        filename: 'bundle-[hash].css'
+      })
+    ]
   };
 }
 
-else {
-  // add production-specific properties
-  config = {
-    ...config,
-    devtool: 'cheap-source-map',
-  };
-}
+const cssLoaders = [
+  {
+    loader: 'css-loader',
+    options: {
+      importLoaders: 2,
+      sourceMap: useCssSourceMap
+    }
+  },
+  {
+    loader: 'postcss-loader',
+    options: {
+      plugins: () => [
+        require('autoprefixer')({ browsers: [ 'last 1 version', 'ie >= 11' ] })
+      ],
+      sourceMap: useCssSourceMap
+    }
+  },
+  {
+    loader: 'sass-loader',
+    options: {
+      sourceMap: useCssSourceMap
+    }
+  }
+];
 
 // add common properties
 config = {
   ...config,
 
-  entry:
-    Array.isArray(config.entry)
-      ? [
-        ...config.entry,
-        './src/index.tsx',
-      ]
-      : './src/index.tsx',
+  entry: './src/index.tsx',
 
   output: {
     path: path.join(__dirname, '/dist/'),
     filename: 'bundle-[hash].js',
-    publicPath,
+    publicPath
   },
 
   resolve: {
     // resolvable extensions.
-    extensions: [ '.ts', '.tsx', '.js' ],
+    extensions: [ '.ts', '.tsx', '.js' ]
   },
 
   module: {
@@ -102,7 +121,13 @@ config = {
       {
         test: /\.tsx?$/,
         use: [
-          'react-hot-loader/webpack',
+          {
+            loader: 'babel-loader',
+            options: {
+              babelrc: false,
+              plugins: [ 'react-hot-loader/babel' ]
+            }
+          },
           {
             loader: 'ts-loader',
             options: {
@@ -111,36 +136,26 @@ config = {
             }
           }
         ],
-        exclude: /node-modules/,
+        exclude: /node-modules/
       },
       // All output '.js' files will have any sourcemaps re-processed by 'source-map-loader'.
       {
         enforce: 'pre',
         test: /\.js$/,
         use: 'source-map-loader',
+        exclude: [ /node_modules/, /dist/, /__test__/ ]
       },
       {
-        /**
-         * css-loader makes any urls within the project part of our dependency graph
-         * and the style-loader puts a style tag for the CSS in our HTML.
-         */
         test: /\.s?css$/,
-        use: [
-          'style-loader',
-          {
-            loader: 'css-loader',
-            options: { importLoaders: 2 },
-          },
-          {
-            loader: 'postcss-loader',
-            options: {
-              plugins: () => [
-                require('autoprefixer')({ browsers: ['last 1 version', 'ie >= 11'] }),
-              ],
-            },
-          },
-          'sass-loader'
-        ],
+        use: developmentEnv
+          ? [
+            'style-loader',
+            ...cssLoaders
+          ]
+          : ExtractTextPlugin.extract({
+            fallback: 'style-loader',
+            use: cssLoaders
+          })
       },
       {
         test: /\.(jpe?g|png|gif|woff|woff2|eot|ttf|svg|pdf)$/i,
@@ -150,19 +165,15 @@ config = {
             options: {
               hash: 'sha512',
               digest: 'hex',
-              publicPath: `${publicPath}/`,
+              publicPath: `${publicPath}assets/`,
               outputPath: 'assets/',
-              name: '[name]-[hash].[ext]',
-            },
-          },
+              name: '[name]-[hash].[ext]'
+            }
+          }
         ]
-      },
-      {
-        test: /\.json$/,
-        use: 'json-loader',
-      },
-    ],
-  },
+      }
+    ]
+  }
 
   // When importing a module whose path matches one of the following, just
   // assume a corresponding global variable exists and use that instead.

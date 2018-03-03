@@ -4,3 +4,4 @@ node_modules
 coverage
 dist
 __generated__
+yarn-error.log
