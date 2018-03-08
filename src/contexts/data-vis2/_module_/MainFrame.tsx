@@ -19,12 +19,13 @@ interface State {
 
 interface ChartState {
   update: () => void;
+  resize: () => void;
 }
 
 export default class MainFrame extends React.PureComponent<Props, State> {
   state: State;
 
-  private chartState: ChartState = { update: () => undefined };
+  private chartState: ChartState = { update: () => undefined, resize: () => undefined };
 
   constructor(props: Props) {
     super(props);
@@ -36,6 +37,18 @@ export default class MainFrame extends React.PureComponent<Props, State> {
         y: 50
       }))
     };
+  }
+
+  componentDidMount() {
+    window.addEventListener('resize', this.windowResized);
+  }
+
+  componentDidUpdate() {
+    this.chartState.update();
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.windowResized);
   }
 
   render() {
@@ -56,15 +69,17 @@ export default class MainFrame extends React.PureComponent<Props, State> {
     );
   }
 
+  private windowResized = () => this.chartState.resize();
+
   private renderChart = (elem: HTMLElement | null) => {
     if (elem !== null) {
       this.chartState = (() => {
 
-        const clientRect = elem.getBoundingClientRect();
+        let clientRect = elem.getBoundingClientRect();
 
         const scale = d3.scaleLinear()
                         .domain([ 0, 1 ])
-                        .range([ 1, 20 ]);
+                        .range([ 1, 15 ]);
 
         const $svg = d3.select(elem)
                        .append<SVGSVGElement>('svg')
@@ -93,8 +108,8 @@ export default class MainFrame extends React.PureComponent<Props, State> {
                                                               .attr('r', scale(d.data.relativePopulation))
                                                               .on('mousemove', () => {
                                                                 $tooltipDiv.classed('data-vis-tooltip--hover', true)
-                                                                           .style('left', d3.event.pageX + 4 + 'px')
-                                                                           .style('top', d3.event.pageY + 4 + 'px')
+                                                                           .style('left', d3.event.pageX - 20 + 'px')
+                                                                           .style('top', d3.event.pageY - 70 + 'px')
                                                                            .select('div')
                                                                            .html(`<span>${ d.data.geo }</span><br /><span>${ populationFormat(d.data.population)}</span>`);
                                                               })
@@ -103,8 +118,14 @@ export default class MainFrame extends React.PureComponent<Props, State> {
                                                               });
 
                                             if (d.data.relativePopulation > .4) {
-                                              $g.append('text')
-                                                .text(d.data.geo);
+                                              const $gText = $g.append<SVGGElement>('g');
+                                              $gText.append('text')
+                                                    .attr('class', 'data-vis-text-country')
+                                                    .text(d.data.geo);
+                                              $gText.append('text')
+                                                    .attr('class', 'data-vis-text-population')
+                                                    .attr('transform', `translate(0,3)`)
+                                                    .text(populationFormat(d.data.population));
                                             }
                                             else {
                                               $circle.append('title')
@@ -130,6 +151,13 @@ export default class MainFrame extends React.PureComponent<Props, State> {
         return {
           update: () => {
             // nothing to update
+          },
+
+          resize: () => {
+            clientRect = elem.getBoundingClientRect();
+
+            $svg.attr('width', clientRect.width)
+                .attr('height', clientRect.height);
           }
         };
       })();

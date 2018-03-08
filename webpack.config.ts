@@ -7,7 +7,7 @@ import * as ForkTsCheckerWebpackPlugin from 'fork-ts-checker-webpack-plugin';
 
 const productionEnv = process.env.NODE_ENV === 'production';
 const developmentEnv = !productionEnv;
-const title = 'Zonal Annual Mean Land-Ocean Temperature';
+const title = 'European Union Population';
 const publicPath = process.env.PUBLIC_PATH || '/';
 const useCssSourceMap = false; // not yet ready to avoid the "Flash of Unstyled Content" effect
 
@@ -165,7 +165,7 @@ config = {
             options: {
               hash: 'sha512',
               digest: 'hex',
-              publicPath: `${publicPath}assets/`,
+              publicPath: path.join(publicPath, 'assets/'),
               outputPath: 'assets/',
               name: '[name]-[hash].[ext]'
             }

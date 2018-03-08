@@ -36,7 +36,7 @@ exports[`<MainFrame /> should display the tooltip 1`] = `
               class="data-vis-group-circle"
             >
               <circle
-                r="2.922256439254956"
+                r="2.4163994815562835"
               >
                 <title>
                   Austria
@@ -47,7 +47,7 @@ exports[`<MainFrame /> should display the tooltip 1`] = `
               class="data-vis-group-circle"
             >
               <circle
-                r="3.520443301990648"
+                r="2.857168748835214"
               >
                 <title>
                   Belgium
@@ -58,7 +58,7 @@ exports[`<MainFrame /> should display the tooltip 1`] = `
               class="data-vis-group-circle"
             >
               <circle
-                r="2.536762499006339"
+                r="2.1323513150573024"
               >
                 <title>
                   Bulgaria
@@ -69,7 +69,7 @@ exports[`<MainFrame /> should display the tooltip 1`] = `
               class="data-vis-group-circle"
             >
               <circle
-                r="1.8567531686998793"
+                r="1.6312918085157004"
               >
                 <title>
                   Croatia
@@ -80,7 +80,7 @@ exports[`<MainFrame /> should display the tooltip 1`] = `
               class="data-vis-group-circle"
             >
               <circle
-                r="1.095593156773153"
+                r="1.0704370628854811"
               >
                 <title>
                   Cyprus
@@ -91,7 +91,7 @@ exports[`<MainFrame /> should display the tooltip 1`] = `
               class="data-vis-group-circle"
             >
               <circle
-                r="3.3388825368642356"
+                r="2.723387132426279"
               >
                 <title>
                   Czech Republic
@@ -102,7 +102,7 @@ exports[`<MainFrame /> should display the tooltip 1`] = `
               class="data-vis-group-circle"
             >
               <circle
-                r="2.2246104207905804"
+                r="1.902344520582533"
               >
                 <title>
                   Denmark
@@ -113,7 +113,7 @@ exports[`<MainFrame /> should display the tooltip 1`] = `
               class="data-vis-group-circle"
             >
               <circle
-                r="1.2019053597015632"
+                r="1.148772370306415"
               >
                 <title>
                   Estonia
@@ -124,7 +124,7 @@ exports[`<MainFrame /> should display the tooltip 1`] = `
               class="data-vis-group-circle"
             >
               <circle
-                r="2.1679810798422485"
+                r="1.8606176377784989"
               >
                 <title>
                   Finland
@@ -135,27 +135,47 @@ exports[`<MainFrame /> should display the tooltip 1`] = `
               class="data-vis-group-circle"
             >
               <circle
-                r="16.36065013552099"
+                r="12.318373784068097"
               />
-              <text>
-                France
-              </text>
+              <g>
+                <text
+                  class="data-vis-text-country"
+                >
+                  France
+                </text>
+                <text
+                  class="data-vis-text-population"
+                  transform="translate(0,3)"
+                >
+                  67,000,000
+                </text>
+              </g>
             </g>
             <g
               class="data-vis-group-circle"
             >
               <circle
-                r="20"
+                r="15"
               />
-              <text>
-                Germany
-              </text>
+              <g>
+                <text
+                  class="data-vis-text-country"
+                >
+                  Germany
+                </text>
+                <text
+                  class="data-vis-text-population"
+                  transform="translate(0,3)"
+                >
+                  82,800,000
+                </text>
+              </g>
             </g>
             <g
               class="data-vis-group-circle"
             >
               <circle
-                r="3.38005549494936"
+                r="2.753725101541634"
               >
                 <title>
                   Greece
@@ -166,7 +186,7 @@ exports[`<MainFrame /> should display the tooltip 1`] = `
               class="data-vis-group-circle"
             >
               <circle
-                r="3.1586494256338185"
+                r="2.5905837873091295"
               >
                 <title>
                   Hungary
@@ -177,7 +197,7 @@ exports[`<MainFrame /> should display the tooltip 1`] = `
               class="data-vis-group-circle"
             >
               <circle
-                r="1.999927549400545"
+                r="1.736788720610928"
               >
                 <title>
                   Ireland
@@ -188,17 +208,27 @@ exports[`<MainFrame /> should display the tooltip 1`] = `
               class="data-vis-group-circle"
             >
               <circle
-                r="14.876119916949053"
+                r="11.224509412488775"
               />
-              <text>
-                Italy
-              </text>
+              <g>
+                <text
+                  class="data-vis-text-country"
+                >
+                  Italy
+                </text>
+                <text
+                  class="data-vis-text-population"
+                  transform="translate(0,3)"
+                >
+                  60,600,000
+                </text>
+              </g>
             </g>
             <g
               class="data-vis-group-circle"
             >
               <circle
-                r="1.3482774138431302"
+                r="1.2566254628317801"
               >
                 <title>
                   Latvia
@@ -209,7 +239,7 @@ exports[`<MainFrame /> should display the tooltip 1`] = `
               class="data-vis-group-circle"
             >
               <circle
-                r="1.5553932671841268"
+                r="1.4092371442409357"
               >
                 <title>
                   Lithuania
@@ -220,7 +250,7 @@ exports[`<MainFrame /> should display the tooltip 1`] = `
               class="data-vis-group-circle"
             >
               <circle
-                r="1.0346583415136217"
+                r="1.0255377253258264"
               >
                 <title>
                   Luxembourg
@@ -242,7 +272,7 @@ exports[`<MainFrame /> should display the tooltip 1`] = `
               class="data-vis-group-circle"
             >
               <circle
-                r="4.839024627217867"
+                r="3.8287549884763235"
               >
                 <title>
                   Netherlands
@@ -253,17 +283,27 @@ exports[`<MainFrame /> should display the tooltip 1`] = `
               class="data-vis-group-circle"
             >
               <circle
-                r="9.658594441129104"
+                r="7.380016956621445"
               />
-              <text>
-                Poland
-              </text>
+              <g>
+                <text
+                  class="data-vis-text-country"
+                >
+                  Poland
+                </text>
+                <text
+                  class="data-vis-text-population"
+                  transform="translate(0,3)"
+                >
+                  38,000,000
+                </text>
+              </g>
             </g>
             <g
               class="data-vis-group-circle"
             >
               <circle
-                r="3.2767684050597303"
+                r="2.677618824780854"
               >
                 <title>
                   Portugal
@@ -274,7 +314,7 @@ exports[`<MainFrame /> should display the tooltip 1`] = `
               class="data-vis-group-circle"
             >
               <circle
-                r="5.428867917676158"
+                r="4.263376360392959"
               >
                 <title>
                   Romania
@@ -285,7 +325,7 @@ exports[`<MainFrame /> should display the tooltip 1`] = `
               class="data-vis-group-circle"
             >
               <circle
-                r="2.1523043825618946"
+                r="1.8490663871508697"
               >
                 <title>
                   Slovakia
@@ -296,7 +336,7 @@ exports[`<MainFrame /> should display the tooltip 1`] = `
               class="data-vis-group-circle"
             >
               <circle
-                r="1.3749871341601394"
+                r="1.2763063093811553"
               >
                 <title>
                   Slovenia
@@ -307,17 +347,27 @@ exports[`<MainFrame /> should display the tooltip 1`] = `
               class="data-vis-group-circle"
             >
               <circle
-                r="11.632427523568696"
+                r="8.834420280524302"
               />
-              <text>
-                Spain
-              </text>
+              <g>
+                <text
+                  class="data-vis-text-country"
+                >
+                  Spain
+                </text>
+                <text
+                  class="data-vis-text-population"
+                  transform="translate(0,3)"
+                >
+                  46,500,000
+                </text>
+              </g>
             </g>
             <g
               class="data-vis-group-circle"
             >
               <circle
-                r="3.204233055280633"
+                r="2.6241717249436243"
               >
                 <title>
                   Sweden
@@ -328,11 +378,21 @@ exports[`<MainFrame /> should display the tooltip 1`] = `
               class="data-vis-group-circle"
             >
               <circle
-                r="16.080150433525226"
+                r="12.111689793123851"
               />
-              <text>
-                United Kingdom
-              </text>
+              <g>
+                <text
+                  class="data-vis-text-country"
+                >
+                  United Kingdom
+                </text>
+                <text
+                  class="data-vis-text-population"
+                  transform="translate(0,3)"
+                >
+                  65,800,000
+                </text>
+              </g>
             </g>
           </g>
         </svg>
@@ -405,7 +465,7 @@ exports[`<MainFrame /> should display the tooltip 2`] = `
               class="data-vis-group-circle"
             >
               <circle
-                r="2.922256439254956"
+                r="2.4163994815562835"
               >
                 <title>
                   Austria
@@ -416,7 +476,7 @@ exports[`<MainFrame /> should display the tooltip 2`] = `
               class="data-vis-group-circle"
             >
               <circle
-                r="3.520443301990648"
+                r="2.857168748835214"
               >
                 <title>
                   Belgium
@@ -427,7 +487,7 @@ exports[`<MainFrame /> should display the tooltip 2`] = `
               class="data-vis-group-circle"
             >
               <circle
-                r="2.536762499006339"
+                r="2.1323513150573024"
               >
                 <title>
                   Bulgaria
@@ -438,7 +498,7 @@ exports[`<MainFrame /> should display the tooltip 2`] = `
               class="data-vis-group-circle"
             >
               <circle
-                r="1.8567531686998793"
+                r="1.6312918085157004"
               >
                 <title>
                   Croatia
@@ -449,7 +509,7 @@ exports[`<MainFrame /> should display the tooltip 2`] = `
               class="data-vis-group-circle"
             >
               <circle
-                r="1.095593156773153"
+                r="1.0704370628854811"
               >
                 <title>
                   Cyprus
@@ -460,7 +520,7 @@ exports[`<MainFrame /> should display the tooltip 2`] = `
               class="data-vis-group-circle"
             >
               <circle
-                r="3.3388825368642356"
+                r="2.723387132426279"
               >
                 <title>
                   Czech Republic
@@ -471,7 +531,7 @@ exports[`<MainFrame /> should display the tooltip 2`] = `
               class="data-vis-group-circle"
             >
               <circle
-                r="2.2246104207905804"
+                r="1.902344520582533"
               >
                 <title>
                   Denmark
@@ -482,7 +542,7 @@ exports[`<MainFrame /> should display the tooltip 2`] = `
               class="data-vis-group-circle"
             >
               <circle
-                r="1.2019053597015632"
+                r="1.148772370306415"
               >
                 <title>
                   Estonia
@@ -493,7 +553,7 @@ exports[`<MainFrame /> should display the tooltip 2`] = `
               class="data-vis-group-circle"
             >
               <circle
-                r="2.1679810798422485"
+                r="1.8606176377784989"
               >
                 <title>
                   Finland
@@ -504,27 +564,47 @@ exports[`<MainFrame /> should display the tooltip 2`] = `
               class="data-vis-group-circle"
             >
               <circle
-                r="16.36065013552099"
+                r="12.318373784068097"
               />
-              <text>
-                France
-              </text>
+              <g>
+                <text
+                  class="data-vis-text-country"
+                >
+                  France
+                </text>
+                <text
+                  class="data-vis-text-population"
+                  transform="translate(0,3)"
+                >
+                  67,000,000
+                </text>
+              </g>
             </g>
             <g
               class="data-vis-group-circle"
             >
               <circle
-                r="20"
+                r="15"
               />
-              <text>
-                Germany
-              </text>
+              <g>
+                <text
+                  class="data-vis-text-country"
+                >
+                  Germany
+                </text>
+                <text
+                  class="data-vis-text-population"
+                  transform="translate(0,3)"
+                >
+                  82,800,000
+                </text>
+              </g>
             </g>
             <g
               class="data-vis-group-circle"
             >
               <circle
-                r="3.38005549494936"
+                r="2.753725101541634"
               >
                 <title>
                   Greece
@@ -535,7 +615,7 @@ exports[`<MainFrame /> should display the tooltip 2`] = `
               class="data-vis-group-circle"
             >
               <circle
-                r="3.1586494256338185"
+                r="2.5905837873091295"
               >
                 <title>
                   Hungary
@@ -546,7 +626,7 @@ exports[`<MainFrame /> should display the tooltip 2`] = `
               class="data-vis-group-circle"
             >
               <circle
-                r="1.999927549400545"
+                r="1.736788720610928"
               >
                 <title>
                   Ireland
@@ -557,17 +637,27 @@ exports[`<MainFrame /> should display the tooltip 2`] = `
               class="data-vis-group-circle"
             >
               <circle
-                r="14.876119916949053"
+                r="11.224509412488775"
               />
-              <text>
-                Italy
-              </text>
+              <g>
+                <text
+                  class="data-vis-text-country"
+                >
+                  Italy
+                </text>
+                <text
+                  class="data-vis-text-population"
+                  transform="translate(0,3)"
+                >
+                  60,600,000
+                </text>
+              </g>
             </g>
             <g
               class="data-vis-group-circle"
             >
               <circle
-                r="1.3482774138431302"
+                r="1.2566254628317801"
               >
                 <title>
                   Latvia
@@ -578,7 +668,7 @@ exports[`<MainFrame /> should display the tooltip 2`] = `
               class="data-vis-group-circle"
             >
               <circle
-                r="1.5553932671841268"
+                r="1.4092371442409357"
               >
                 <title>
                   Lithuania
@@ -589,7 +679,7 @@ exports[`<MainFrame /> should display the tooltip 2`] = `
               class="data-vis-group-circle"
             >
               <circle
-                r="1.0346583415136217"
+                r="1.0255377253258264"
               >
                 <title>
                   Luxembourg
@@ -611,7 +701,7 @@ exports[`<MainFrame /> should display the tooltip 2`] = `
               class="data-vis-group-circle"
             >
               <circle
-                r="4.839024627217867"
+                r="3.8287549884763235"
               >
                 <title>
                   Netherlands
@@ -622,17 +712,27 @@ exports[`<MainFrame /> should display the tooltip 2`] = `
               class="data-vis-group-circle"
             >
               <circle
-                r="9.658594441129104"
+                r="7.380016956621445"
               />
-              <text>
-                Poland
-              </text>
+              <g>
+                <text
+                  class="data-vis-text-country"
+                >
+                  Poland
+                </text>
+                <text
+                  class="data-vis-text-population"
+                  transform="translate(0,3)"
+                >
+                  38,000,000
+                </text>
+              </g>
             </g>
             <g
               class="data-vis-group-circle"
             >
               <circle
-                r="3.2767684050597303"
+                r="2.677618824780854"
               >
                 <title>
                   Portugal
@@ -643,7 +743,7 @@ exports[`<MainFrame /> should display the tooltip 2`] = `
               class="data-vis-group-circle"
             >
               <circle
-                r="5.428867917676158"
+                r="4.263376360392959"
               >
                 <title>
                   Romania
@@ -654,7 +754,7 @@ exports[`<MainFrame /> should display the tooltip 2`] = `
               class="data-vis-group-circle"
             >
               <circle
-                r="2.1523043825618946"
+                r="1.8490663871508697"
               >
                 <title>
                   Slovakia
@@ -665,7 +765,7 @@ exports[`<MainFrame /> should display the tooltip 2`] = `
               class="data-vis-group-circle"
             >
               <circle
-                r="1.3749871341601394"
+                r="1.2763063093811553"
               >
                 <title>
                   Slovenia
@@ -676,17 +776,27 @@ exports[`<MainFrame /> should display the tooltip 2`] = `
               class="data-vis-group-circle"
             >
               <circle
-                r="11.632427523568696"
+                r="8.834420280524302"
               />
-              <text>
-                Spain
-              </text>
+              <g>
+                <text
+                  class="data-vis-text-country"
+                >
+                  Spain
+                </text>
+                <text
+                  class="data-vis-text-population"
+                  transform="translate(0,3)"
+                >
+                  46,500,000
+                </text>
+              </g>
             </g>
             <g
               class="data-vis-group-circle"
             >
               <circle
-                r="3.204233055280633"
+                r="2.6241717249436243"
               >
                 <title>
                   Sweden
@@ -697,11 +807,21 @@ exports[`<MainFrame /> should display the tooltip 2`] = `
               class="data-vis-group-circle"
             >
               <circle
-                r="16.080150433525226"
+                r="12.111689793123851"
               />
-              <text>
-                United Kingdom
-              </text>
+              <g>
+                <text
+                  class="data-vis-text-country"
+                >
+                  United Kingdom
+                </text>
+                <text
+                  class="data-vis-text-population"
+                  transform="translate(0,3)"
+                >
+                  65,800,000
+                </text>
+              </g>
             </g>
           </g>
         </svg>
@@ -819,7 +939,7 @@ exports[`<MainFrame /> should render the svg element 1`] = `
               class="data-vis-group-circle"
             >
               <circle
-                r="2.922256439254956"
+                r="2.4163994815562835"
               >
                 <title>
                   Austria
@@ -830,7 +950,7 @@ exports[`<MainFrame /> should render the svg element 1`] = `
               class="data-vis-group-circle"
             >
               <circle
-                r="3.520443301990648"
+                r="2.857168748835214"
               >
                 <title>
                   Belgium
@@ -841,7 +961,7 @@ exports[`<MainFrame /> should render the svg element 1`] = `
               class="data-vis-group-circle"
             >
               <circle
-                r="2.536762499006339"
+                r="2.1323513150573024"
               >
                 <title>
                   Bulgaria
@@ -852,7 +972,7 @@ exports[`<MainFrame /> should render the svg element 1`] = `
               class="data-vis-group-circle"
             >
               <circle
-                r="1.8567531686998793"
+                r="1.6312918085157004"
               >
                 <title>
                   Croatia
@@ -863,7 +983,7 @@ exports[`<MainFrame /> should render the svg element 1`] = `
               class="data-vis-group-circle"
             >
               <circle
-                r="1.095593156773153"
+                r="1.0704370628854811"
               >
                 <title>
                   Cyprus
@@ -874,7 +994,7 @@ exports[`<MainFrame /> should render the svg element 1`] = `
               class="data-vis-group-circle"
             >
               <circle
-                r="3.3388825368642356"
+                r="2.723387132426279"
               >
                 <title>
                   Czech Republic
@@ -885,7 +1005,7 @@ exports[`<MainFrame /> should render the svg element 1`] = `
               class="data-vis-group-circle"
             >
               <circle
-                r="2.2246104207905804"
+                r="1.902344520582533"
               >
                 <title>
                   Denmark
@@ -896,7 +1016,7 @@ exports[`<MainFrame /> should render the svg element 1`] = `
               class="data-vis-group-circle"
             >
               <circle
-                r="1.2019053597015632"
+                r="1.148772370306415"
               >
                 <title>
                   Estonia
@@ -907,7 +1027,7 @@ exports[`<MainFrame /> should render the svg element 1`] = `
               class="data-vis-group-circle"
             >
               <circle
-                r="2.1679810798422485"
+                r="1.8606176377784989"
               >
                 <title>
                   Finland
@@ -918,27 +1038,47 @@ exports[`<MainFrame /> should render the svg element 1`] = `
               class="data-vis-group-circle"
             >
               <circle
-                r="16.36065013552099"
+                r="12.318373784068097"
               />
-              <text>
-                France
-              </text>
+              <g>
+                <text
+                  class="data-vis-text-country"
+                >
+                  France
+                </text>
+                <text
+                  class="data-vis-text-population"
+                  transform="translate(0,3)"
+                >
+                  67,000,000
+                </text>
+              </g>
             </g>
             <g
               class="data-vis-group-circle"
             >
               <circle
-                r="20"
+                r="15"
               />
-              <text>
-                Germany
-              </text>
+              <g>
+                <text
+                  class="data-vis-text-country"
+                >
+                  Germany
+                </text>
+                <text
+                  class="data-vis-text-population"
+                  transform="translate(0,3)"
+                >
+                  82,800,000
+                </text>
+              </g>
             </g>
             <g
               class="data-vis-group-circle"
             >
               <circle
-                r="3.38005549494936"
+                r="2.753725101541634"
               >
                 <title>
                   Greece
@@ -949,7 +1089,7 @@ exports[`<MainFrame /> should render the svg element 1`] = `
               class="data-vis-group-circle"
             >
               <circle
-                r="3.1586494256338185"
+                r="2.5905837873091295"
               >
                 <title>
                   Hungary
@@ -960,7 +1100,7 @@ exports[`<MainFrame /> should render the svg element 1`] = `
               class="data-vis-group-circle"
             >
               <circle
-                r="1.999927549400545"
+                r="1.736788720610928"
               >
                 <title>
                   Ireland
@@ -971,17 +1111,27 @@ exports[`<MainFrame /> should render the svg element 1`] = `
               class="data-vis-group-circle"
             >
               <circle
-                r="14.876119916949053"
+                r="11.224509412488775"
               />
-              <text>
-                Italy
-              </text>
+              <g>
+                <text
+                  class="data-vis-text-country"
+                >
+                  Italy
+                </text>
+                <text
+                  class="data-vis-text-population"
+                  transform="translate(0,3)"
+                >
+                  60,600,000
+                </text>
+              </g>
             </g>
             <g
               class="data-vis-group-circle"
             >
               <circle
-                r="1.3482774138431302"
+                r="1.2566254628317801"
               >
                 <title>
                   Latvia
@@ -992,7 +1142,7 @@ exports[`<MainFrame /> should render the svg element 1`] = `
               class="data-vis-group-circle"
             >
               <circle
-                r="1.5553932671841268"
+                r="1.4092371442409357"
               >
                 <title>
                   Lithuania
@@ -1003,7 +1153,7 @@ exports[`<MainFrame /> should render the svg element 1`] = `
               class="data-vis-group-circle"
             >
               <circle
-                r="1.0346583415136217"
+                r="1.0255377253258264"
               >
                 <title>
                   Luxembourg
@@ -1025,7 +1175,7 @@ exports[`<MainFrame /> should render the svg element 1`] = `
               class="data-vis-group-circle"
             >
               <circle
-                r="4.839024627217867"
+                r="3.8287549884763235"
               >
                 <title>
                   Netherlands
@@ -1036,17 +1186,27 @@ exports[`<MainFrame /> should render the svg element 1`] = `
               class="data-vis-group-circle"
             >
               <circle
-                r="9.658594441129104"
+                r="7.380016956621445"
               />
-              <text>
-                Poland
-              </text>
+              <g>
+                <text
+                  class="data-vis-text-country"
+                >
+                  Poland
+                </text>
+                <text
+                  class="data-vis-text-population"
+                  transform="translate(0,3)"
+                >
+                  38,000,000
+                </text>
+              </g>
             </g>
             <g
               class="data-vis-group-circle"
             >
               <circle
-                r="3.2767684050597303"
+                r="2.677618824780854"
               >
                 <title>
                   Portugal
@@ -1057,7 +1217,7 @@ exports[`<MainFrame /> should render the svg element 1`] = `
               class="data-vis-group-circle"
             >
               <circle
-                r="5.428867917676158"
+                r="4.263376360392959"
               >
                 <title>
                   Romania
@@ -1068,7 +1228,7 @@ exports[`<MainFrame /> should render the svg element 1`] = `
               class="data-vis-group-circle"
             >
               <circle
-                r="2.1523043825618946"
+                r="1.8490663871508697"
               >
                 <title>
                   Slovakia
@@ -1079,7 +1239,7 @@ exports[`<MainFrame /> should render the svg element 1`] = `
               class="data-vis-group-circle"
             >
               <circle
-                r="1.3749871341601394"
+                r="1.2763063093811553"
               >
                 <title>
                   Slovenia
@@ -1090,17 +1250,27 @@ exports[`<MainFrame /> should render the svg element 1`] = `
               class="data-vis-group-circle"
             >
               <circle
-                r="11.632427523568696"
+                r="8.834420280524302"
               />
-              <text>
-                Spain
-              </text>
+              <g>
+                <text
+                  class="data-vis-text-country"
+                >
+                  Spain
+                </text>
+                <text
+                  class="data-vis-text-population"
+                  transform="translate(0,3)"
+                >
+                  46,500,000
+                </text>
+              </g>
             </g>
             <g
               class="data-vis-group-circle"
             >
               <circle
-                r="3.204233055280633"
+                r="2.6241717249436243"
               >
                 <title>
                   Sweden
@@ -1111,11 +1281,21 @@ exports[`<MainFrame /> should render the svg element 1`] = `
               class="data-vis-group-circle"
             >
               <circle
-                r="16.080150433525226"
+                r="12.111689793123851"
               />
-              <text>
-                United Kingdom
-              </text>
+              <g>
+                <text
+                  class="data-vis-text-country"
+                >
+                  United Kingdom
+                </text>
+                <text
+                  class="data-vis-text-population"
+                  transform="translate(0,3)"
+                >
+                  65,800,000
+                </text>
+              </g>
             </g>
           </g>
         </svg>

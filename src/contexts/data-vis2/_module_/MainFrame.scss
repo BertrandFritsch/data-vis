@@ -3,7 +3,7 @@
   display: flex;
   flex-direction: column;
   height: 100%;
-  width: 1000px;
+  width: 100%;
   margin: 0 auto;
 
   .data-vis-header {
@@ -15,25 +15,30 @@
     }
 
     .data-vis-header-1 {
-      font-size: 2rem;
+      font-size: 1.5rem;
     }
 
     .data-vis-header-2 {
-      font-size: 1.5rem;
+      font-size: .9rem;
     }
   }
 
   .data-vis-body {
     flex: 1;
-    display: flex;
-    min-height: 500px;
-    min-width: 500px;
+    height: 100%;
+    width: 100%;
     align-self: center;
+    position: relative;
 
     .data-vis-chart {
-      flex: 1;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
       align-self: stretch;
       margin: 20px;
+      // border: 1px solid #a6a6a6;
 
       svg {
 
@@ -46,12 +51,20 @@
         }
 
         text {
-          font-size: .2rem;
           font-family: ibm-plex-sans;
           text-anchor: middle;
-          dominant-baseline: central;
           fill: white;
           pointer-events: none;
+        }
+
+        .data-vis-text-country {
+          font-size: .15rem;
+//          dominant-baseline: central;
+        }
+
+        .data-vis-text-population {
+          font-size: .12rem;
+  //        dominant-baseline: text-before-edge;
         }
       }
     }
