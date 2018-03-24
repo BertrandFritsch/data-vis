@@ -41,31 +41,6 @@
       // border: 1px solid #a6a6a6;
 
       svg {
-
-        circle {
-          fill: #6898cf;
-
-          &:hover {
-            fill: #5b7faf;
-          }
-        }
-
-        text {
-          font-family: ibm-plex-sans;
-          text-anchor: middle;
-          fill: white;
-          pointer-events: none;
-        }
-
-        .data-vis-text-country {
-          font-size: .15rem;
-//          dominant-baseline: central;
-        }
-
-        .data-vis-text-population {
-          font-size: .12rem;
-  //        dominant-baseline: text-before-edge;
-        }
       }
     }
 

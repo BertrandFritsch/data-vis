@@ -5,185 +5,192 @@ import * as WebpackNotifierPlugin from 'webpack-notifier';
 import * as ExtractTextPlugin from 'extract-text-webpack-plugin';
 import * as ForkTsCheckerWebpackPlugin from 'fork-ts-checker-webpack-plugin';
 
-const productionEnv = process.env.NODE_ENV === 'production';
-const developmentEnv = !productionEnv;
-const title = 'European Union Population';
-const publicPath = process.env.PUBLIC_PATH || '/';
-const useCssSourceMap = false; // not yet ready to avoid the "Flash of Unstyled Content" effect
+interface Env {
+  NODE_ENV: 'development' | 'production';
+  PUBLIC_PATH?: 'string';
+}
 
-let config: webpack.Configuration = {};
+export default (env: Env) => {
+  const productionEnv = env.NODE_ENV === 'production';
+  const developmentEnv = !productionEnv;
+  const title = 'Focusable Timeline';
+  const publicPath = env.PUBLIC_PATH || '/';
+  const useCssSourceMap = false; // not yet ready to avoid the "Flash of Unstyled Content" effect
 
-config.entry = [];
-config.plugins = [
-  new HtmlWebpackPlugin({
-    template: 'index.html',
-    inject: 'body',
-    filename: 'index.html',
-    title
-  })
-];
+  let config: webpack.Configuration = {};
 
-if (developmentEnv) {
-  // add development-specific properties
-  config = {
-    ...config,
-    plugins: [
-      ...config.plugins,
-      new WebpackNotifierPlugin({ alwaysNotify: true, title }),
+  config.entry = [];
+  config.plugins = [
+    new HtmlWebpackPlugin({
+      template: 'index.html',
+      inject: 'body',
+      filename: 'index.html',
+      title
+    })
+  ];
 
-      // enable HMR globally
-      new webpack.HotModuleReplacementPlugin(),
+  if (developmentEnv) {
+    // add development-specific properties
+    config = {
+      ...config,
+      plugins: [
+        ...config.plugins,
+        new WebpackNotifierPlugin({ alwaysNotify: true, title }),
 
-      // prints more readable module names in the browser console on HMR updates
-      new webpack.NamedModulesPlugin(),
+        // enable HMR globally
+        new webpack.HotModuleReplacementPlugin(),
 
-      new ForkTsCheckerWebpackPlugin(
-        {
-          tslint: false,
-          watch: [ './src' ]
-        }
-      )
-    ],
+        // prints more readable module names in the browser console on HMR updates
+        new webpack.NamedModulesPlugin(),
 
-    devServer: {
-      hot: true,
-      historyApiFallback: {
-        rewrites: [
-          { from: '/favicon.ico', to: './nginx/assets/favicon.ico' },
+        new ForkTsCheckerWebpackPlugin(
           {
-            from: '/assets/.+$',
-            to: (context: { parsedUrl: { pathname: string } }) => `./nginx${ context.parsedUrl.pathname }`
+            tslint: false,
+            watch: [ './src' ]
           }
-        ]
+        )
+      ],
+
+      devServer: {
+        hot: true,
+        historyApiFallback: {
+          rewrites: [
+            { from: '/favicon.ico', to: './nginx/assets/favicon.ico' },
+            {
+              from: '/assets/.+$',
+              to: (context: { parsedUrl: { pathname: string } }) => `./nginx${ context.parsedUrl.pathname }`
+            }
+          ]
+        }
+      },
+
+      devtool: 'cheap-module-eval-source-map'
+    };
+  }
+  else {
+    // add production-specific properties
+    config = {
+      ...config,
+      plugins: [
+        ...config.plugins,
+        new ExtractTextPlugin({
+          filename: 'bundle-[hash].css'
+        })
+      ]
+    };
+  }
+
+  const cssLoaders = [
+    {
+      loader: 'css-loader',
+      options: {
+        importLoaders: 2,
+        sourceMap: useCssSourceMap
       }
     },
-
-    devtool: 'cheap-module-eval-source-map'
-  };
-}
-else {
-  config = {
-    ...config,
-    plugins: [
-      ...config.plugins,
-      new ExtractTextPlugin({
-        filename: 'bundle-[hash].css'
-      })
-    ]
-  };
-}
-
-const cssLoaders = [
-  {
-    loader: 'css-loader',
-    options: {
-      importLoaders: 2,
-      sourceMap: useCssSourceMap
+    {
+      loader: 'postcss-loader',
+      options: {
+        ident: 'postcss',
+        plugins: [
+          require('autoprefixer')({ browsers: [ 'last 1 version', 'ie >= 11' ] })
+        ],
+        sourceMap: useCssSourceMap
+      }
+    },
+    {
+      loader: 'sass-loader',
+      options: {
+        sourceMap: useCssSourceMap
+      }
     }
-  },
-  {
-    loader: 'postcss-loader',
-    options: {
-      plugins: () => [
-        require('autoprefixer')({ browsers: [ 'last 1 version', 'ie >= 11' ] })
-      ],
-      sourceMap: useCssSourceMap
-    }
-  },
-  {
-    loader: 'sass-loader',
-    options: {
-      sourceMap: useCssSourceMap
-    }
-  }
-];
+  ];
 
 // add common properties
-config = {
-  ...config,
+  return {
+    ...config,
 
-  entry: './src/index.tsx',
+    entry: './src/index.tsx',
 
-  output: {
-    path: path.join(__dirname, '/dist/'),
-    filename: 'bundle-[hash].js',
-    publicPath
-  },
+    output: {
+      path: path.join(__dirname, '/dist/'),
+      filename: 'bundle-[hash].js',
+      publicPath
+    },
 
-  resolve: {
-    // resolvable extensions.
-    extensions: [ '.ts', '.tsx', '.js' ]
-  },
+    resolve: {
+      // resolvable extensions.
+      extensions: [ '.ts', '.tsx', '.js' ]
+    },
 
-  module: {
-    rules: [
-      // All files with a '.ts' or '.tsx' extension will be handled by 'ts-loader'.
-      {
-        test: /\.tsx?$/,
-        use: [
-          {
-            loader: 'babel-loader',
-            options: {
-              babelrc: false,
-              plugins: [ 'react-hot-loader/babel' ]
+    module: {
+      rules: [
+        // All files with a '.ts' or '.tsx' extension will be handled by 'ts-loader'.
+        {
+          test: /\.tsx?$/,
+          use: [
+            {
+              loader: 'babel-loader',
+              options: {
+                babelrc: false,
+                plugins: [ 'react-hot-loader/babel' ]
+              }
+            },
+            {
+              loader: 'ts-loader',
+              options: {
+                // disable type checker - we will use it in fork plugin
+                transpileOnly: true
+              }
             }
-          },
-          {
-            loader: 'ts-loader',
-            options: {
-              // disable type checker - we will use it in fork plugin
-              transpileOnly: true
+          ],
+          exclude: /node_modules/
+        },
+        // All output '.js' files will have any sourcemaps re-processed by 'source-map-loader'.
+        {
+          enforce: 'pre',
+          test: /\.js$/,
+          use: 'source-map-loader',
+          exclude: [ /node_modules/, /dist/, /__test__/ ]
+        },
+        {
+          test: /\.s?css$/,
+          use: developmentEnv
+            ? [
+              'style-loader',
+              ...cssLoaders
+            ]
+            : ExtractTextPlugin.extract({
+              fallback: 'style-loader',
+              use: cssLoaders
+            })
+        },
+        {
+          test: /\.(jpe?g|png|gif|woff|woff2|eot|ttf|svg|pdf)$/i,
+          use: [
+            {
+              loader: 'file-loader',
+              options: {
+                hash: 'sha512',
+                digest: 'hex',
+                publicPath: path.join(publicPath, 'assets/'),
+                outputPath: 'assets/',
+                name: '[name]-[hash].[ext]'
+              }
             }
-          }
-        ],
-        exclude: /node-modules/
-      },
-      // All output '.js' files will have any sourcemaps re-processed by 'source-map-loader'.
-      {
-        enforce: 'pre',
-        test: /\.js$/,
-        use: 'source-map-loader',
-        exclude: [ /node_modules/, /dist/, /__test__/ ]
-      },
-      {
-        test: /\.s?css$/,
-        use: developmentEnv
-          ? [
-            'style-loader',
-            ...cssLoaders
           ]
-          : ExtractTextPlugin.extract({
-            fallback: 'style-loader',
-            use: cssLoaders
-          })
-      },
-      {
-        test: /\.(jpe?g|png|gif|woff|woff2|eot|ttf|svg|pdf)$/i,
-        use: [
-          {
-            loader: 'file-loader',
-            options: {
-              hash: 'sha512',
-              digest: 'hex',
-              publicPath: path.join(publicPath, 'assets/'),
-              outputPath: 'assets/',
-              name: '[name]-[hash].[ext]'
-            }
-          }
-        ]
-      }
-    ]
-  }
+        }
+      ]
+    }
 
-  // When importing a module whose path matches one of the following, just
-  // assume a corresponding global variable exists and use that instead.
-  // This is important because it allows us to avoid bundling all of our
-  // dependencies, which allows browsers to cache those libraries between builds.
-  // To use it, add script includes into index.html
-  // externals: {
-  //   jQuery: 'jQuery',
-  //   ReactDOM: 'ReactDOM'
-  // },
+    // When importing a module whose path matches one of the following, just
+    // assume a corresponding global variable exists and use that instead.
+    // This is important because it allows us to avoid bundling all of our
+    // dependencies, which allows browsers to cache those libraries between builds.
+    // To use it, add script includes into index.html
+    // externals: {
+    //   jQuery: 'jQuery',
+    //   ReactDOM: 'ReactDOM'
+    // },
+  };
 };
-
-export default config;

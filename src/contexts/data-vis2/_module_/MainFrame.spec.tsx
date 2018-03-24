@@ -43,18 +43,4 @@ describe('<MainFrame />', () => {
 
     expect(root).toMatchSnapshot();
   });
-
-  it('should display the tooltip', () => {
-
-    const props = { ...getInitialProps() };
-
-    mount<Props>(<MainFrame { ...props } />, { attachTo: root });
-    root.querySelector('circle')!.dispatchEvent(new MouseEvent('mousemove'));
-
-    expect(root).toMatchSnapshot();
-
-    root.querySelector('circle')!.dispatchEvent(new MouseEvent('mouseout'));
-
-    expect(root).toMatchSnapshot();
-  });
 });
