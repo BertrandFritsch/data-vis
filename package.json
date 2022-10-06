@@ -19,19 +19,22 @@
     "lint": "tslint -c tslint.json 'src/**/*.{ts,tsx}'",
     "test:unit:watch": "NODE_ENV=test jest --watch",
     "test:unit": "NODE_ENV=test jest --coverage --coverageReporters lcov",
-    "tsc": "tsc -p ./tsconfig.all.json --noEmit --pretty"
+    "tsc": "tsc -p ./tsconfig.all.json --noEmit --pretty",
+    "prepare": "yarn run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "dependencies": {
     "@ibm/plex": "^1.0.1",
     "carbon-components": "^8.16.6",
     "carbon-icons": "^6.3.1",
-    "d3": "^4.13.0",
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0",
+    "d3": "^7.0.0",
+    "react": "^16.5.0",
+    "react-dom": "^16.5.0",
     "react-redux": "^5.0.7",
     "redux": "^3.7.2",
     "redux-saga": "^0.16.0",
-    "reselect": "^3.0.1"
+    "reselect": "^3.0.1",
+    "@snyk/protect": "latest"
   },
   "devDependencies": {
     "@types/d3": "^5.0.0",
@@ -109,5 +112,6 @@
       "src/{contexts}/**/*.{ts,tsx}",
       "!src/{contexts}/**/*.spec.{ts,tsx}"
     ]
-  }
+  },
+  "snyk": true
 }
